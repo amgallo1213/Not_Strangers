@@ -19,33 +19,56 @@
 <body>
 
 
-    <div class="parent">
+
+    <div id="offer">
+        <p>Free U.S. shipping on all orders over $150</p>
+    </div>
+    <header>
+        <nav role="navigation" class="nav">
+            <div class="nav-child">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="">Learn</a>
+                <a href="shop.html">Shop</a>
+                <a href="">User</a>
+                <a href="">Cart</a>
+            </div> 
+            <div class="nav-child">
+                <i class='bx bx-menu bars bx-sm' title="button to open navigation" onclick="on()"></i>
+            </div>   
+        </nav>
+    </header>
+
+    <div id="overlay">
+        <div class="icon-container">
+            <i class='bx bx-x bx-sm' title="button to close navigation" onclick="off()"></i>
+        </div>
+        <div class="overlay-text">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="">Learn</a>
+            <a href="shop.html">Shop</a>
+            <a href="">User</a>
+            <a href="">Cart</a>
+        </div>
+    </div>
+
         
 
-        <header>
-            <div class="ship-offer"><p>Free U.S. shipping on all orders over $150</p></div>
-            <nav>
-                <ul class="nav-ul">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="http://" class="nav-link">Learn</a></li>
-                    <li class="nav-item"><i class='bx bx-user bx-sm' class="nav-link"></i></li>
-                    <li class="nav-item"><a href="cart.html" class="nav-link"><i class='bx bx-cart bx-sm' ></i></a></li>
-                </ul>
-            </nav>
+        <!-- <div>
             <h1 id="shop-h1">Our Perfumes</h1>
             <div class="hero">
                 <div><img src="images/rosebottle.jpg" alt="" class="shop-hero-img"></div>
                 <div><img src="images/throat.jpg" alt="" class="shop-hero-img"></div>
             </div>
-        </header>
+        </div> -->
 
 
 
         <main>
             <section id="best-sellers">
                 <h3>Best Sellers</h3>
-                <div class="products">
+                <div class="best-sellers">
                     <div class="card">
                         <div class="card-img-container">
                             <img src="images/venn.jpg" alt="" class="image">
@@ -92,7 +115,7 @@
 
             <section id="best-sellers">
                 <h3>Lighter</h3>
-                <div class="products">
+                <div class="best-sellers">
                     <div class="card">
                         <div class="card-img-container">
                             <img src="images/venn.jpg" alt="" class="image">
@@ -108,7 +131,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Humidity Extinguisher</h4>
+                            <h4 class="card-name">Shogun Assassin</h4>
                             <p>Eau du Parfum | 50mL | $120</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -128,7 +151,17 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">Ibn Sina</h4>
+                            <p>Eau du Parfum | 50mL | $100</p>
+                            <button class="card-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="images/venn.jpg" alt="" class="image">
+                        </div>
+                        <div class="card-subgrid">
+                            <h4 class="card-name">Crashing Sexual Traffic</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -148,7 +181,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">Stevie Nick's Piano Tuner</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -158,17 +191,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
-                            <p>Eau du Parfum | 50mL | $100</p>
-                            <button class="card-btn">Add to Cart</button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-img-container">
-                            <img src="images/venn.jpg" alt="" class="image">
-                        </div>
-                        <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">Lukewarm Champagne</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -180,13 +203,13 @@
 
             <section id="best-sellers">
                 <h3>Heavier</h3>
-                <div class="products">
+                <div class="best-sellers">
                     <div class="card">
                         <div class="card-img-container">
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Beach Witch</h4>
+                            <h4 class="card-name">Awake Before Dawn</h4>
                             <p>Eau du Parfum | 50mL | $120</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>  
@@ -206,7 +229,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">All Inclusive Vibe</h4>
+                            <h4 class="card-name">A Complex Proposition</h4>
                             <p>Eau du Parfum  |  50mL |  $150</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -216,7 +239,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">Scrumptus Precision</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -226,7 +249,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">Happy Indeed</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -236,7 +259,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">The Little Thief</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -246,7 +269,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">Hungry Water</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -256,7 +279,7 @@
                             <img src="images/venn.jpg" alt="" class="image">
                         </div>
                         <div class="card-subgrid">
-                            <h4 class="card-name">Abandoned Saints</h4>
+                            <h4 class="card-name">All the Swans</h4>
                             <p>Eau du Parfum | 50mL | $100</p>
                             <button class="card-btn">Add to Cart</button>
                         </div>
@@ -265,7 +288,26 @@
             </section>
 
 
+            <section id="sign-up">
+                <div class="s-container">
+                    <div class="s-col-left">
+                        <h4 class="s-h4">Keep in Touch</h4>
+                        <p class="s-p">Get 10% off your first order, plus exclusive members only offers and promotions</p>
+                    </div>
+                    <div class="s-col-right">
+                        <form action="submit">
+                            <input type="email" name="" id="email-input" placeholder="Your Email">
+                            <button class="s-btn">Sign Up</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </section>
+
+
         </main>
+
+
 
 
         <script src="script.js"></script>

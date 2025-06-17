@@ -80,14 +80,6 @@ header  {
     color: #00032A;
 }
 
-/* header a    {
-    color: #00032A;
-    padding: 8px;
-}
-
-header a:hover  {
-    color: #f6eeec;
-} */
 
 nav {
     display: flex;
@@ -95,18 +87,17 @@ nav {
     padding-top: 8px;
 }
 
-/* .nav-child  {
-    color: #00032A;
-    padding: 8px;
-    
-} */
+.nav    {
+    background-color: #f6eeec;
+    padding: 16px;
+}
+
 
 .nav-child a    {
     color: #00032A;
     padding: 8px;
     font-family: "Josefin Sans", sans-serif;
     cursor: pointer;
-    /* text-transform: uppercase; */
 }
 
 .nav-child a:hover    {
@@ -305,6 +296,10 @@ h3  {
 
 .card   {
     margin-bottom: 24px;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .card-subgrid   {
