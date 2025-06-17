@@ -46,11 +46,14 @@ a   {
     text-decoration: none;
 }
 
-
 img {
     display: block;
     max-width: 100%;
     object-fit: cover;
+}
+
+button a    {
+    color: #00032A;
 }
 
 h1  {
