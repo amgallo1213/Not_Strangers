@@ -19,9 +19,23 @@ html {
     navigation: auto;
 }
 
-::view-transition-group(root) {
-    animation-duration: 0.5s;
+:root {
+    view-transition-name: root;
 }
+
+::view-transition-group(root) {
+    /* animation-duration: 0.5s; */
+    animation-duration: 1s;
+}
+
+/* ::view-transition-old(root) {
+    animation-duration: 1s;
+
+}
+
+::view-transition-new(root) {
+    animation-duration: 1s;
+} */
 
 main    {
     display: flex;
