@@ -271,6 +271,26 @@ h2  {
     }
 }
 
+.preview    {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    padding: 40px;
+}
+
+.preview-h2   {
+    font-size: 2rem;
+    padding-top: 16px;
+}
+
+.preview-h1 {
+    font-size: 3rem;
+}
+
+.preview-img    {
+    height: 400px;
+    /* padding: 20px; */
+}
 
 
 
