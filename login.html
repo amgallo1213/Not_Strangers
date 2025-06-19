@@ -10,23 +10,23 @@
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 
 
-    <title>Not Strangers | About</title>
+    <title>Not Strangers | Login</title>
 </head>
 <body>
-
+    
     <div id="offer">
         <p>Free U.S. shipping on all orders over $150</p>
     </div>
     <header>
-        <nav role="navigation" class="nav">
+        <nav role="navigation">
             <div class="nav-child">
                 <a href="index.html">Home</a>
-                <a href="about.html">About</a>
                 <a href="learn.html">Learn</a>
                 <a href="shop.html">Shop</a>
                 <a href="login.html">My Account</a>
@@ -44,7 +44,6 @@
         </div>
         <div class="overlay-text">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="learn.html">Learn</a>
             <a href="shop.html">Shop</a>
             <a href="login.html">My Account</a>
@@ -53,17 +52,34 @@
     </div>
 
 
-    <main >
-        <div class="preview">
-            <h1 class="preview-h1">Hello Stranger</h1>
-            <img src="images/more bottles.jpg" alt="" class="preview-img">
-            <h2 class="preview-h2">Coming Soon...</h2>
-        </div>
+    <main>
+        <div class="acct-login">
+            <h2 class="login-h2">Login</h2>
+            <div id="login">
+                <form action="" class="login-form">
+                    <div class="input">
+                        <label for="username" class="form-label">Email</label>
+                        <input type="text" name="user-email" id="user-email" placeholder="Enter Your Email" class="text-input">
+                    </div>
+                    <div class="input">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" id="login-password" class="text-input">
+                    </div>
+
+                    <button class="login-btn">Sign In</button>
+                    <div class="login-questions">
+                        <p><a href="">Forgot password?</a> / <a href="">Create Account</a></p>
+                    </div>
+                </form>
+                <img src="images/login.jpg" alt="" class="login-img">
+            </div>
             
+    
+        </div>
 
 
         <section id="main-email">
-            <div>
+            <div >
                 <h4 class="email-h4">Keep in Touch</h4>
                 <p class="email-p">Get 10% off your first order, plus exclusive members only offers and promotions</p>
             </div>
@@ -74,6 +90,8 @@
                 </form>  
             </div>
         </section>
+
+
     </main>
 
     <footer>
@@ -99,6 +117,12 @@
 
 
     <script src="script.js"></script>
+
+
+
+
+
+
 
 </body>
 </html>
