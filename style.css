@@ -81,6 +81,10 @@ nav {
     padding-top: 8px;
 }
 
+.bx-user   {
+    color: #00032A;
+}
+
 .nav-child a    {
     color: #00032A;
     padding: 8px;
