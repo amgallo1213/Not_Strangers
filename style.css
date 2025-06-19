@@ -53,6 +53,10 @@ h1  {
     text-align: center;
 }
 
+.btn-link    {
+    color: #00032A;
+}
+
 
 #offer  {
     background-color: #00032A;
@@ -508,6 +512,57 @@ h3  {
 }
 
 
+/* -------------------------- PREVIEW ------------------------------------ */
+
+
+
+.preview    {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    padding: 40px;
+}
+
+.preview-h2   {
+    font-size: 2rem;
+    padding-top: 16px;
+}
+
+.preview-h1 {
+    font-size: 3rem;
+}
+
+.preview-img    {
+    height: 400px;
+}
+
+
+
+/* -------------------------- FOOTER ------------------------------------ */
+
+
+footer  {
+    height: 100px;
+    background-color: #f6eeec;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-link    {
+    color: #00032A;
+    padding: 8px;
+}
+
+.social-icon    {
+    padding: 8px;
+}
+
+
+
+
+
 
 @media (max-width: 575.98px) {
 
@@ -593,6 +648,13 @@ h3  {
 
     #email-input    {
         margin-bottom: 8px;
+    }
+
+    footer  {
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
 }
