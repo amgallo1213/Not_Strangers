@@ -595,14 +595,6 @@ heavierPerfumesDiv.innerHTML = heavierPerfumesCard.join("")
 
 
 
-const addAlert = document.getElementById('fuck')
-
-function addButtonClick() {
-    addAlert.classList.add("fade-in")
-    addAlert.style.display = "block"
-    // alert("Added to cart!")
-}
-
 
 
 
