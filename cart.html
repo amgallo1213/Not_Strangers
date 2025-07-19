@@ -14,15 +14,71 @@
 
     <link rel="stylesheet" href="style.css"> 
 
-    <title>Document</title>
+    <title>My Cart</title>
 </head>
 <body>
-    <button><a href="index.html">Home</a></button>
-    <h1>cart</h1>
+    <div id="offer">
+        <p>Free U.S. shipping on all orders over $150</p>
+    </div>
+    <header>
+        <nav role="navigation" class="nav">
+            <div class="nav-child">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="learn.html">Learn</a>
+                <a href="shop.html">Shop</a>
+                <a href="login.html">My Account</a>
+                <a href="cart.html">Cart</a>
+            </div> 
+            <div class="nav-child">
+                <i class='bx bx-menu bars bx-sm' title="button to open navigation" onclick="on()"></i>
+            </div>   
+        </nav>
+    </header>
+    <div id="overlay">
+        <div class="icon-container">
+            <i class='bx bx-x bx-sm' title="button to close navigation" onclick="off()"></i>
+        </div>
+        <div class="overlay-text">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="learn.html">Learn</a>
+            <a href="shop.html">Shop</a>
+            <a href="login.html">My Account</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </div>
+
+<main>
+    <div class="preview">
+        <h1 class="preview-h1">Shopping Cart</h1>
+    </div>
+</main>
+    
 
     <!-- <ul id="cart"></ul> -->
 
-
+    <footer>
+        <div>
+            <div>
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="about" class="footer-link">About</a>
+                <a href="learn.html" class="footer-link">Learn</a>
+                <a href="shop.html" class="footer-link">Shop</a>
+                <a href="login.html" class="footer-link">My Account</a>
+                <a href="cart.html" class="footer-link">Cart</a>
+            </div>
+            <div>
+                <i class='bx bxl-instagram bx-sm social-icon' ></i> 
+                <i class='bx bxs-castle bx-sm social-icon' ></i> 
+                <i class='bx bxl-facebook-circle bx-sm social-icon' ></i>
+                <i class='bx bxl-tiktok bx-sm social-icon'></i>
+            </div>
+        </div>
+        <div>
+            <h3>Not Strangers</h3>
+        </div>
+    </footer>
 
 
 
