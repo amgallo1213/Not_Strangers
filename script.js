@@ -19,12 +19,14 @@ function off() {
 }
 
 
+
+
 const bestSellers = [
     {
         id : 521688,
         quantity : 1,
         name : "Beach Witch",
-        category : "lighter",
+        img : "",
         keyWords : "",
         notes : [
             {head : "salt, orange", heart : "ylang-ylang", base : "sandalwood"}
@@ -37,7 +39,7 @@ const bestSellers = [
         id : 405233,
         quantity : 1,
         name : "Humidity Extinguisher",
-        category : "heavier",
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -50,7 +52,7 @@ const bestSellers = [
         id : 324544,
         quantity : 1,
         name : "All Inclusive Vibe",
-        category : "lighter",
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -64,8 +66,7 @@ const bestSellers = [
         id : 623088,
         quantity : 1,
         name : "Abandoned Saints",
-        category : "lighter",
-        bestSeller : true,
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -81,7 +82,7 @@ const lighterPerfumes = [
         id : 521688,
         quantity : 1,
         name : "Beach Witch",
-        category : "lighter",
+        img : "",
         keyWords : "",
         notes : [
             {head : "salt, orange", heart : "ylang-ylang", base : "sandalwood"}
@@ -108,7 +109,7 @@ const lighterPerfumes = [
         id : 324544,
         quantity : 1,
         name : "All Inclusive Vibe",
-        category : "lighter",
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -122,7 +123,6 @@ const lighterPerfumes = [
         quantity : 1,
         name : "Ibn Sina",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -150,8 +150,7 @@ const lighterPerfumes = [
         id : 623088,
         quantity : 1,
         name : "Abandoned Saints",
-        category : "lighter",
-        bestSeller : true,
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -165,7 +164,6 @@ const lighterPerfumes = [
         quantity : 1,
         name : "Stevie Nick's Piano Tuner",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -179,7 +177,6 @@ const lighterPerfumes = [
         quantity : 1,
         name : "Lukewarm Champagne",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -197,7 +194,6 @@ const heavierPerfumes = [
         quantity : 1,
         name : "Awake Before Dawn",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {"head" : "", "heart" : "", "base" : ""}
@@ -210,7 +206,7 @@ const heavierPerfumes = [
         id : 405233,
         quantity : 1,
         name : "Humidity Extinguisher",
-        category : "heavier",
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -237,7 +233,6 @@ const heavierPerfumes = [
         quantity : 1,
         name : "Scrumptus Precision",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -251,7 +246,6 @@ const heavierPerfumes = [
         quantity : 1,
         name : "Happy Indeed",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -265,7 +259,6 @@ const heavierPerfumes = [
         quantity : 1,
         name : "The Little Thief",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -279,7 +272,6 @@ const heavierPerfumes = [
         quantity : 1,
         name : "Hungry Water",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -293,8 +285,6 @@ const heavierPerfumes = [
         quantity : 1,
         name : "All the Swans",
         img : "",
-        category : "heavier",
-        bestSeller : true,
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -311,7 +301,7 @@ const allPerfumes = [
         id : 324544,
         quantity : 1,
         name : "All Inclusive Vibe",
-        category : "lighter",
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -324,7 +314,7 @@ const allPerfumes = [
         id : 521688,
         quantity : 1,
         name : "Beach Witch",
-        category : "lighter",
+        img : "",
         keyWords : "",
         notes : [
             {head : "salt, orange", heart : "ylang-ylang", base : "sandalwood"}
@@ -337,7 +327,7 @@ const allPerfumes = [
         id : 405233,
         quantity : 1,
         name : "Humidity Extinguisher",
-        category : "heavier",
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -351,7 +341,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Shogun Assassin",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -365,7 +354,6 @@ const allPerfumes = [
         quantity : 1,
         name : "The Little Thief",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -379,7 +367,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Ibn Sina",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -393,7 +380,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Crashing Sexual Traffic",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -407,8 +393,7 @@ const allPerfumes = [
         id : 623088,
         quantity : 1,
         name : "Abandoned Saints",
-        category : "lighter",
-        bestSeller : true,
+        img : "",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -422,7 +407,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Stevie Nick's Piano Tuner",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -436,7 +420,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Lukewarm Champagne",
         img : "",
-        category : "lighter",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -450,7 +433,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Awake Before Dawn",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {"head" : "", "heart" : "", "base" : ""}
@@ -477,7 +459,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Scrumptus Precision",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -491,7 +472,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Happy Indeed",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -505,7 +485,6 @@ const allPerfumes = [
         quantity : 1,
         name : "Hungry Water",
         img : "",
-        category : "heavier",
         keyWords : "",
         notes : [
             {head : "", heart : "", base : ""}
@@ -519,7 +498,6 @@ const allPerfumes = [
         quantity : 1,
         name : "All the Swans",
         img : "",
-        category : "heavier",
         bestSeller : true,
         keyWords : "",
         notes : [
@@ -591,6 +569,28 @@ const heavierPerfumesDiv = document.querySelector('.heavier-card-grid-wrapper');
 heavierPerfumesDiv.innerHTML = heavierPerfumesCard.join("")
 
 
+
+let cart = []
+
+function updateCart () {
+    const cartHTML = cart.map(
+        (item) => `<div class="cart-item">
+            <h3>${item.name}</h3>
+            <div class="cart-detail">
+                <button onclick={decrItem(${item.id})}> - </button>
+                <p>${item.quantity}</p>
+                <button onclick={incrItem(${item.id})}> + </button>
+            </div>
+            <p>$${item.price}</p>
+            <button onclick={deleteItem(${item.id})} class="cart-product" id=${item.id}> D </button>
+        </div>`
+    )
+
+    const cartItems = document.querySelector(".cart-items")
+    cartItems.innerHTML = cartHTML.join("")
+}
+
+updateCart()
 
 
 
