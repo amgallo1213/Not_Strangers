@@ -537,7 +537,7 @@ const allPerfumes = [
 const bestSellersCard = bestSellers.map(
     (product) => `<div class="card" >
                     <div class="card-img-container" >
-                        // <img src="images/venn.jpg" alt="" class="image">
+                        <img src="images/venn.jpg" alt="" class="image">
                     </div>
                     <div class="card-subgrid">
                         <h4 class="card-name">${product.name}</h4>
@@ -556,7 +556,7 @@ bestSellersDiv.innerHTML = bestSellersCard.join("")
 const lighterPerfumesCard = lighterPerfumes.map(
     (product) => `<div class="card" >
                     <div class="card-img-container" >
-                        // <img src="images/venn.jpg" alt="" class="image">
+                        <img src="images/venn.jpg" alt="" class="image">
                     </div>
                     <div class="card-subgrid">
                         <h4 class="card-name">${product.name}</h4>
@@ -576,7 +576,7 @@ lighterPerfumesDiv.innerHTML = lighterPerfumesCard.join("")
 const heavierPerfumesCard = heavierPerfumes.map(
     (product) => `<div class="card" >
                     <div class="card-img-container" >
-                        // <img src="images/venn.jpg" alt="" class="image">
+                        <img src="images/venn.jpg" alt="" class="image">
                     </div>
                     <div class="card-subgrid">
                         <h4 class="card-name">${product.name}</h4>
