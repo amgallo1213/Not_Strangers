@@ -19,6 +19,8 @@ function off() {
 }
 
 
+// ********************* DATA ************************************
+
 
 
 const bestSellers = [
@@ -509,6 +511,8 @@ const allPerfumes = [
     }
 ]
 
+let cart = []
+
 
 
 
@@ -521,12 +525,11 @@ const bestSellersCard = bestSellers.map(
                         <h4 class="card-name">${product.name}</h4>
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${product.price}</p>
-                        <button class="card-btn" id=${product.id}>Add to Cart</button>
+                        <button class="card-btn product-btn" id=${product.id} onclick="addToCart(${product.id})" >Add to Cart</button>
                     </div>  
                 </div>`
 )
-
-const bestSellersDiv = document.querySelector('.card-grid-wrapper');
+const bestSellersDiv = document.querySelector('.best-sellers-card-grid-wrapper');
 bestSellersDiv.innerHTML = bestSellersCard.join("")
 
 
@@ -540,14 +543,12 @@ const lighterPerfumesCard = lighterPerfumes.map(
                         <h4 class="card-name">${product.name}</h4>
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${product.price}</p>
-                        <button class="card-btn" id=${product.id}>Add to Cart</button>
+                        <button class="card-btn product-btn" id=${product.id} onclick="addToCart()">Add to Cart</button>
                     </div>  
                 </div>`
 )
-
 const lighterPerfumesDiv = document.querySelector('.lighter-card-grid-wrapper');
 lighterPerfumesDiv.innerHTML = lighterPerfumesCard.join("")
-
 
 
 
@@ -560,37 +561,33 @@ const heavierPerfumesCard = heavierPerfumes.map(
                         <h4 class="card-name">${product.name}</h4>
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${product.price}</p>
-                        <button class="card-btn" id=${product.id}>Add to Cart</button>
+                        <button class="card-btn product-btn" id=${product.id} onclick="addToCart()">Add to Cart</button>
                     </div>  
                 </div>`
 )
-
 const heavierPerfumesDiv = document.querySelector('.heavier-card-grid-wrapper');
 heavierPerfumesDiv.innerHTML = heavierPerfumesCard.join("")
 
 
 
-let cart = []
 
-function updateCart () {
-    const cartHTML = cart.map(
-        (item) => `<div class="cart-item">
-            <h3>${item.name}</h3>
-            <div class="cart-detail">
-                <button onclick={decrItem(${item.id})}> - </button>
-                <p>${item.quantity}</p>
-                <button onclick={incrItem(${item.id})}> + </button>
-            </div>
-            <p>$${item.price}</p>
-            <button onclick={deleteItem(${item.id})} class="cart-product" id=${item.id}> D </button>
-        </div>`
-    )
-
-    const cartItems = document.querySelector(".cart-items")
-    cartItems.innerHTML = cartHTML.join("")
+function addToCart() {
+    alert("Added to Cart")
 }
 
-updateCart()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
