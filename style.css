@@ -579,6 +579,57 @@ h3 {
 /* -------------------------- ADDED TO CART MODAL ------------------------------------ */
 
 
+.modal  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    width: 80%;
+    min-height: 50%;
+    min-width: 80%;
+    max-width: 700px;
+    overflow-y: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 5px;
+}
+
+.modal-content h2 {
+    text-align: center;
+    font-size: 26px;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+.modal-content span {
+    position: absolute;
+    top: 2%;
+    left: 93%;
+}
+
+
+
+
+
+.hide {
+    display: none;
+}
+
+#hide {
+    display: none;
+}
+
+
+
 
 /* Open state of the dialog  */
 dialog:open {
