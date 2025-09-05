@@ -122,6 +122,15 @@ i:hover {
     text-align: right;
 }
 
+.cart-number-container  {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #00032A;
+    color: #f6eeec;
+    padding: 8px;
+}
+
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -578,6 +587,27 @@ h3 {
 
 /* -------------------------- ADDED TO CART MODAL ------------------------------------ */
 
+.cart-container {
+    /* display: flex;
+    flex-direction: row;
+    margin-left: 20px; */
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+    border: 3px solid red;
+    position: relative;
+}
+
+.bx-cart    {
+    font-size: 36px;
+    color:#00032A;
+}
+
+.bx-x   {
+    font-size: 36px;
+    color:#00032A;
+    z-index: 99;
+}
 
 .modal  {
     position: fixed;
@@ -601,6 +631,7 @@ h3 {
     background-color: #fff;
     position: relative;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .modal-content h2 {
@@ -616,9 +647,129 @@ h3 {
     left: 93%;
 }
 
+.modal-content span:hover {
+    cursor: pointer;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+div.item-container {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+div.item-container button {
+    position: absolute;
+    top: 0;
+    left: 95%;
+}
+
+#cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#checkout {
+    background-color: transparent;
+    height: 60px;
+    width: 200px;
+    border: 1px solid #00032A;
+    border-radius: 5px;
+    margin: 16px;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: smaller;
+    color: #00032A;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+#checkout:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+    cursor: pointer;
+}
+
+#checkout:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+.checkout-message {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #00032A;
+    color: #f6eeec;
+    width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 2px
+}
+
+#item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+    margin: 24px;
+    position: relative;
+    border-bottom: 1px solid #00032A;
+    /* border: 1px solid hotpink; */
+}
+
+.button-quantity-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    border: 1px solid #00032A;
+    border-radius: 5px;
+}
+
+.cart-quantity-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    place-items: center;
+}
+
+.cart-quantity  {
+    font-size: 32px;
+}
+
+.cart-title h3 {
+    font-size: 32px;
+    padding: 24px;
+}
+
+.cart-price, #item-total {
+    font-size: 32px;
+}
+
+.plus, .minus {
+    color: #00032A;
+    background-color: #f6eeec;
+    border: 1px solid #00032A;
+    width: 35px;
+    height: 35px;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 24px;
+    margin: 8px;
+    cursor: pointer;
+}
 
 
+.bx-trash   {
+    font-size: 28px;
+    padding: 24px;
+}
 
+#item-total {
+    text-align: center;
+}
 
 .hide {
     display: none;
@@ -627,68 +778,6 @@ h3 {
 #hide {
     display: none;
 }
-
-
-
-
-/* Open state of the dialog  */
-dialog:open {
-    opacity: 1;
-    transform: scaleY(1);
-}
-
-/* Closed state of the dialog   */
-dialog {
-    opacity: 0;
-    transform: scaleY(0);
-    transition:
-        opacity 0.7s ease-out,
-        transform 0.7s ease-out,
-        overlay 0.7s ease-out allow-discrete,
-        display 0.7s ease-out allow-discrete;
-
-}
-
-
-dialog:open {
-    opacity: 0;
-    transform: scaleY(0);
-}
-
-dialog::backdrop {
-    background-color: transparent;
-    transition:
-        display 0.7s allow-discrete,
-        /* overlay 0.7s allow-discrete, */
-        background-color 0.7s;
-
-}
-
-dialog:open::backdrop {
-    background-color: rgb(0 0 0 / 25%);
-    margin-top: 20px;
-    margin-left: 20px;
-    max-width: 80vw;
-    max-height: 90vh;
-}
-
-
-@starting-style {
-    dialog:open::backdrop {
-        background-color: transparent;
-    }
-}
-
-.dialog-content {
-    background-color: #f6eeec;
-    color: #00032A;
-    height: 200px;
-    width: 400px;
-    padding-top: 40px;
-    position: relative;
-    z-index: 16;
-}
-
 
 
 

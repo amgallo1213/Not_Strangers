@@ -10,7 +10,9 @@
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     
 
     <link rel="stylesheet" href="style.css">
@@ -30,11 +32,20 @@
                 <a href="learn.html">Learn</a>
                 <a href="shop.html">Shop</a>
                 <a href="login.html">My Account</a>
-                <a href="cart.html">Cart</a>
+                <!-- <a href="cart.html">Cart</a> -->
+                <div class="cart-container">
+                    <p>cart</p>
+                    <i class='bx bx-cart'  style='color:#00032A'></i> 
+                    <div class="cart-number-container">0</div>
+                </div>
             </div> 
             <div class="nav-child">
                 <i class='bx bx-menu bars bx-sm' title="button to open navigation" onclick="on()"></i>
-            </div>   
+            </div> 
+            <!-- <div class="cart-container">
+                <i class='bxr  bx-cart'  ></i> 
+                <div class="cart-number-container">0</div>
+            </div> -->
         </nav>
     </header>
 
@@ -48,7 +59,20 @@
             <a href="learn.html">Learn</a>
             <a href="shop.html">Shop</a>
             <a href="login.html">My Account</a>
-            <a href="cart.html">Cart</a>
+            <!-- <a href="cart.html">Cart</a> -->
+            <div class="cart-container">
+                <i class='bx  bx-cart'  style='color:#00032A'></i> 
+                <div class="cart-number-container">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal hide">
+        <div class="modal-content">
+            <span><i class='bx  bx-x closeX'></i></span>
+            <h2>Shopping Cart</h2>
+            <ul id="cart-list"></ul>
+            <h5 id="cart-total">total</h5>
         </div>
     </div>
 
@@ -135,23 +159,11 @@
             </div>
         </section>
         
-        <!-- <dialog id="dialog">
-            <i class='bx  bx-x close'  autofocus></i> 
-            <div class="dialog-content">
-                <p>Perfume Added to Cart!</p>
-                <button class="close">close</button>
-            </div>   
-        </dialog> -->
+
+        
     </main>
 
-    <div id="cart-modal" class="modal hide">
-        <div class="modal-content">
-            <span><i class='bx  bx-x'></i></span>
-            <h2>Shopping Cart</h2>
-            <ul id="cart-list"></ul>
-            <h5 id="cart-total"></h5>
-        </div>
-    </div>
+    
 
     <footer>
         <div>

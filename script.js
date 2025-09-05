@@ -20,139 +20,25 @@ function off() {
 
 
 
-const lighterPerfumes = [
-    {
-        id: 521688,
-        quantity: 1,
-        name: "Beach Witch",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "salt, orange", heart: "ylang-ylang", base: "sandalwood" }
-        ],
-        price: 120,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 789489,
-        quantity: 1,
-        name: "Shogun Assassin",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 324544,
-        quantity: 1,
-        name: "All Inclusive Vibe",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 115786,
-        quantity: 1,
-        name: "Ibn Sina",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 545861,
-        quantity: 1,
-        name: "Crashing Sexual Traffic",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 623088,
-        quantity: 1,
-        name: "Abandoned Saints",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 909261,
-        quantity: 1,
-        name: "Stevie Nick's Piano Tuner",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    },
-    {
-        id: 234513,
-        quantity: 1,
-        name: "Lukewarm Champagne",
-        img: "",
-        category: "lighter",
-        keyWords: "",
-        notes: [
-            { head: "", heart: "", base: "" }
-        ],
-        price: 150,
-        size: 30,
-        description: "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-    }
-]
-
-
-
-    
-
-
-
 
 // ********************* DATA ************************************
 
+let allProducts
+let cart = []
+
+fetchData();
+openCart()
+closeCart()
 
 async function fetchData() {
     let response = await fetch("./data.json");
     let data = await response.json();
+    allProducts = data
     console.log(data);
     displayProducts(data)
 }
 
-fetchData();
+// fetchData();
 
 function displayProducts(products) {
 
@@ -171,6 +57,7 @@ function displayProducts(products) {
                         <h4 class="card-name">${name}</h4>
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${price}</p>
+                        <p class="price-span">ID: ${id}</p>
                         <button class="card-btn product-btn" id=${id} onclick="addToCart()">Add to Cart</button>
                     </div>  
                 </div>`
@@ -193,6 +80,7 @@ function displayProducts(products) {
                         <h4 class="card-name">${name}</h4>
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${price}</p>
+                        <p class="price-span">ID: ${id}</p>
                         <button class="card-btn product-btn" id=${id} onclick="addToCart()">Add to Cart</button>
                     </div>  
                 </div>`
@@ -214,7 +102,8 @@ function displayProducts(products) {
                         <h4 class="card-name">${name}</h4>
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${price}</p>
-                        <button class="card-btn product-btn" id=${id} onclick="addToCart()">Add to Cart</button>
+                        <p class="price-span">ID: ${id}</p>
+                        <button class="card-btn product-btn" id=${id} onclick="addToCart(${id})">Add to Cart</button>
                     </div>  
                 </div>`
     })
@@ -223,50 +112,142 @@ function displayProducts(products) {
 
 
 
+// ********************* CART MODAL ************************************
 
 
 
+function openCart() {
+    const cartBtn = document.querySelector(".cart-container")
+    cartBtn.addEventListener("click", seeModal)
+}
 
-function addToCart() {
-    alert("Added to Cart")
+function seeModal() {
+    const body = document.body
+    const cartModal = document.querySelector(".modal")
+    cartModal.classList.remove("hide")
+    body.classList.add("modal-open")
+    // alert("cart opened! Shazam!")
+}
+
+function closeCart() {
+    const closeBtn = document.querySelector(".closeX")
+    closeBtn.addEventListener("click", closeModal)
+}
+
+function closeModal() {
+    const body = document.body
+    const cartModal = document.querySelector(".modal")
+    cartModal.classList.add("hide")
+    body.classList.remove("modal-open")
+    // alert("cart closed! Shazam!")
 }
 
 
 
 
-
-
-// ********************* OPEN & CLOSE CART ************************************
+// ********************* CART ************************************
 
 
 
-// function openCart() {
-//     const productBtn = document.querySelector(".cart-container")
-//     productBtn.addEventListener("click", seeModal)
+function addToCart(id) {
+    const searchCart = allProducts.find(product => product.id === id)
+    if (searchCart) {
+        alert("Product already added to cart")
+    } else {
+        const oldProduct = allProducts.find(product => product.id === id)
+        cart.push({ ...oldProduct, quantity: 1 })
+    }
+    console.log(cart)
+    shoppingCart()
+}
+
+function shoppingCart() {
+    const cartList = document.querySelector("#cart-list")
+    const cartTotal = document.querySelector("#cart-total")
+    const cartNumber = document.querySelector(".cart-number-container")
+    let cartHTML = "";
+
+    cart
+        .map((product) => {
+            const { name, price, quantity, id } = product;
+            cartHTML += `
+                <li id="item-container">
+                    <div class="cart-title">
+                        <h3>${name}</h3>
+                    </div>
+                    <div class="cart-quantity-container">
+                        <p class="cart-price">$${price} price</p>
+                        <div class="button-quantity-container">
+                            <button class="plus" onclick="increment(${id}, event)">+</button> 
+                            <p class="price-span">${quantity}</p>
+                            <button class="minus" onclick="decrement(${id}, event)">-</button>
+                        </div>
+                        <p id="item-total">$${(price * quantity)} price * quantity</p>
+                        
+                    </div>
+                    <div class="remove-cart-item">
+                        <i class='bx  bx-trash'  style='color:#00032A' onclick="deleteCartItem(${id}, event)"></i> 
+                    </div>
+                </li>
+            `;
+        })
+        .join("");
+        cartList.innerHTML = cartHTML;
+
+    const itemTotals = document.querySelectorAll("#item-total")
+    let sum = 0
+    itemTotals.forEach((itemTotal) => {
+        const numericValue = itemTotal.innerHTML
+        const index = numericValue.indexOf("$")
+        sum += Number(numericValue.slice(index + 1));
+    });
+    cartTotal.innerHTML = 
+        // sum > 0
+        // ? 
+        `
+            <button id="checkout" onclick="checkout()"> Proceed to Checkout: $${sum}</button>
+        `
+        // : `No items in your cart`;
+
+    let newSum = 0
+    cart.map((product) => {
+        newSum += product.quantity
+    })
+
+    if (newSum < 1) {
+        cartNumber.classList.add("hide")
+    } else {
+        cartNumber.classList.remove("hide")
+        cartNumber.innerHTML = newSum
+    }
+}
+
+
+function increment(id) {
+    const cartProduct = cart.find((product) => product.id === id)
+    if (cartProduct) {
+        cartProduct.quantity++
+    }
+    shoppingCart()
+}
+
+function decrement(id) {
+    const cartProduct = cart.find((product) => product.id === id)
+    if (cartProduct && cartProduct.quantity > 1) {
+        cartProduct.quantity--
+    }
+    shoppingCart()
+}
+
+function deleteCartItem(id) {
+    cart = cart.filter((product) => product.id !== id)
+    shoppingCart()
+}
+
+// function checkout() {
+//     const checkoutBtn = document.querySelector("#checkout")
+//     const cartList = document.querySelector("#cart-list")
+//     cart = []
+//     shoppingCart()
+//     cartList.innerHTML = `<p class="checkout-message">Thank you for your purchase!</p>`
 // }
-
-// function seeModal() {
-//     const body = document.body
-//     const cartModal = document.querySelector(".modal")
-//     cartModal.classList.remove("hide")
-//     body.classList.add("modal-open")
-// }
-
-// function closeCart() {
-//     const closeBtn = document.querySelector(".bx-x")
-//     closeBtn.addEventListener("click", closeModal)
-// }
-
-// function closeModal() {
-//     const body = document.body
-//     const cartModal = document.querySelector(".modal")
-//     cartModal.classList.add("hide")
-//     body.classList.remove("modal-open")
-// }
-
-// openCart()
-// closeCart()
-
-
-
-// 
