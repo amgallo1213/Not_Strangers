@@ -713,7 +713,6 @@ div.item-container button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-top: 20px; */
     margin: 24px;
     position: relative;
     border-bottom: 1px solid #00032A;
@@ -727,12 +726,14 @@ div.item-container button {
     width: 60%;
     border: 1px solid #00032A;
     border-radius: 5px;
+
 }
 
 .cart-quantity-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     place-items: center;
+    border: 1px solid hotpink;
 }
 
 .cart-quantity  {
@@ -1030,6 +1031,26 @@ footer {
         flex-direction: column;
         justify-content: space-evenly;
     }
+
+    .modal-content  {
+        width: 90%;
+        height: 90vh;
+    }
+
+    #item-container  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-quantity-container    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .button-quantity-container  {
+        margin: 16px;
+    }
+
 
 }
 
