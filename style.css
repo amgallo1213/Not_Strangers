@@ -247,7 +247,7 @@ h2 {
     background-color: transparent;
     height: 40px;
     width: 120px;
-    border: 2px solid #00032A;
+    border: 1px solid #00032A;
     border-radius: 5px;
     margin-top: 20px;
     padding: 0.5rem;
@@ -331,7 +331,7 @@ h3 {
     background-color: transparent;
     height: 40px;
     width: 120px;
-    border: 2px solid #00032A;
+    border: 1px solid #00032A;
     border-radius: 5px;
     margin-top: 16px;
     padding: 0.5rem;
@@ -430,7 +430,7 @@ h3 {
     background-color: transparent;
     height: 40px;
     width: 120px;
-    border: 2px solid #00032A;
+    border: 1px solid #00032A;
     border-radius: 5px;
     margin-top: 10px;
     padding: 0.5rem;
@@ -544,7 +544,7 @@ h3 {
     background-color: transparent;
     height: 40px;
     width: 100px;
-    border: 2px solid #f6eeec;
+    border: 1px solid #f6eeec;
     border-radius: 5px;
     padding: 0.5rem;
     font-weight: bold;
@@ -594,7 +594,7 @@ h3 {
     padding: 10px;
     height: 40px;
     cursor: pointer;
-    border: 3px solid red;
+    border: 3px solid pink;
     position: relative;
 }
 
@@ -908,7 +908,7 @@ footer {
     background-color: transparent;
     height: 40px;
     width: 120px;
-    border: 2px solid #00032A;
+    border: 1px solid #00032A;
     border-radius: 5px;
     margin-top: 10px;
     padding: 0.5rem;
