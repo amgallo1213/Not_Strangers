@@ -1,18 +1,22 @@
-// ********************* MENU FUNCTION ************************************
+/* -------------------------- NAV ------------------------------------ */
 
-function on() {
-    const turnOn = document.getElementById("overlay")
-    turnOn.classList.add("fade-in")
-    turnOn.style.display = "block"
+
+function openMobileNav() {
+    const openNav = document.querySelector(".mobile-menu")
+    openNav.classList.add("fade-in")
+    openNav.style.display = "block"
 
     const overflow = document.querySelector("body")
     overflow.style.overflow = "hidden"
 }
 
-function off() {
-    const turnOff = document.getElementById("overlay")
-    // turnOff.classList.remove("fade-in")
-    turnOff.style.display = "none"
+function closeMobileNav() {
+    const closeNav = document.querySelector(".mobile-menu")
+    closeNav.classList.add("fade-out")
+    closeNav.style.display = "none"
+
+    const burgerMenuIcon = document.querySelector("#burger-menu-icon")
+    burgerMenuIcon.style.display = ""
 
     const overflow = document.querySelector("body")
     overflow.style.overflow = ""
@@ -20,36 +24,46 @@ function off() {
 
 
 
-
 // ********************* DATA ************************************
+
+document.addEventListener("DOMContentLoaded", initialise)
 
 let allProducts
 let cart = []
 
-fetchData();
-openCart()
-closeCart()
+
+function initialise() {
+    fetchData();
+    openCart()
+    closeCart()
+}
+
+
 
 async function fetchData() {
-    let response = await fetch("./data.json");
-    let data = await response.json();
-    allProducts = data
-    console.log(data);
-    displayProducts(data)
+    // try {
+        let response = await fetch("./data.json");
+        let data = await response.json();
+        allProducts = data
+        console.log(data);
+        displayProducts(allProducts)
+//     } catch (error) {
+//         console.error(error)
+//     }
 }
 
 // fetchData();
 
-function displayProducts(products) {
+function displayProducts(allProducts) {
 
     const bestSellers = document.querySelector(".best-sellers-card-grid-wrapper")
-    products
-    .map((product) => {
-        const { name, id, price } = product
-        if ( product.bestSeller === true)
-        bestSellers.innerHTML += 
+    allProducts
+        .map((product) => {
+            const { name, id, price } = product
+            if (product.bestSeller === true)
+                bestSellers.innerHTML +=
 
-            `<div class="card" >
+                    `<div class="card" >
                     <div class="card-img-container" >
                         <img src="images/venn.jpg" alt="" class="image">
                     </div>
@@ -61,40 +75,18 @@ function displayProducts(products) {
                         <button class="card-btn product-btn" id=${id} onclick="addToCart()">Add to Cart</button>
                     </div>  
                 </div>`
-    })
-    .join("")
+        })
+        .join("")
 
 
     const lighterPerfumes = document.querySelector('.lighter-card-grid-wrapper')
-    products
-    .map((product) => {
-        const { name, id, price } = product
-        if ( product.category === "lighter")
-        lighterPerfumes.innerHTML += 
+    allProducts
+        .map((product) => {
+            const { name, id, price } = product
+            if (product.category === "lighter")
+                lighterPerfumes.innerHTML +=
 
-            `<div class="card" >
-                    <div class="card-img-container" >
-                        <img src="images/venn.jpg" alt="" class="image">
-                    </div>
-                    <div class="card-subgrid">
-                        <h4 class="card-name">${name}</h4>
-                        <p>Eau du Parfum | 50mL </p>
-                        <p class="price-span">$${price}</p>
-                        <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn" id=${id} onclick="addToCart()">Add to Cart</button>
-                    </div>  
-                </div>`
-    })
-    .join("")
-
-    const heavierPerfumes = document.querySelector('.heavier-card-grid-wrapper')
-    products
-    .map((product) => {
-        const { name, id, price } = product
-        if ( product.category === "heavier")
-        heavierPerfumes.innerHTML += 
-
-            `<div class="card" >
+                    `<div class="card" >
                     <div class="card-img-container" >
                         <img src="images/venn.jpg" alt="" class="image">
                     </div>
@@ -106,8 +98,30 @@ function displayProducts(products) {
                         <button class="card-btn product-btn" id=${id} onclick="addToCart(${id})">Add to Cart</button>
                     </div>  
                 </div>`
-    })
-    .join("")
+        })
+        .join("")
+
+    const heavierPerfumes = document.querySelector('.heavier-card-grid-wrapper')
+    allProducts
+        .map((product) => {
+            const { name, id, price } = product
+            if (product.category === "heavier")
+                heavierPerfumes.innerHTML +=
+
+                    `<div class="card" >
+                    <div class="card-img-container" >
+                        <img src="images/venn.jpg" alt="" class="image">
+                    </div>
+                    <div class="card-subgrid">
+                        <h4 class="card-name">${name}</h4>
+                        <p>Eau du Parfum | 50mL </p>
+                        <p class="price-span">$${price}</p>
+                        <p class="price-span">ID: ${id}</p>
+                        <button class="card-btn product-btn" id=${id} onclick="addToCart(${id})">Add to Cart</button>
+                    </div>  
+                </div>`
+        })
+        .join("")
 }
 
 
@@ -150,15 +164,16 @@ function closeModal() {
 
 
 function addToCart(id) {
-    const searchCart = allProducts.find(product => product.id === id)
+    const searchCart = cart.find(product => product.id === id)
     if (searchCart) {
         alert("Product already added to cart")
     } else {
         const oldProduct = allProducts.find(product => product.id === id)
         cart.push({ ...oldProduct, quantity: 1 })
     }
-    console.log(cart)
+    console.log(product.id)
     shoppingCart()
+    
 }
 
 function shoppingCart() {
@@ -192,7 +207,7 @@ function shoppingCart() {
             `;
         })
         .join("");
-        cartList.innerHTML = cartHTML;
+    cartList.innerHTML = cartHTML;
 
     const itemTotals = document.querySelectorAll("#item-total")
     let sum = 0
@@ -201,13 +216,13 @@ function shoppingCart() {
         const index = numericValue.indexOf("$")
         sum += Number(numericValue.slice(index + 1));
     });
-    cartTotal.innerHTML = 
+    cartTotal.innerHTML =
         // sum > 0
         // ? 
         `
             <button id="checkout" onclick="checkout()"> Proceed to Checkout: $${sum}</button>
         `
-        // : `No items in your cart`;
+    // : `No items in your cart`;
 
     let newSum = 0
     cart.map((product) => {
