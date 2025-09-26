@@ -29,16 +29,11 @@ function closeMobileNav() {
 document.addEventListener("DOMContentLoaded", initialise)
 
 let allProducts
-let cart = []
 
 
 function initialise() {
     fetchData();
-    openCart()
-    closeCart()
 }
-
-
 
 async function fetchData() {
     // try {
@@ -72,7 +67,7 @@ function displayProducts(allProducts) {
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${price}</p>
                         <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn" id=${id} onclick="addToCart()">Add to Cart</button>
+                        <button class="card-btn product-btn add-cart" id=${id} onclick="addToCart()">Add to Cart</button>
                     </div>  
                 </div>`
         })
@@ -95,7 +90,7 @@ function displayProducts(allProducts) {
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${price}</p>
                         <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn" id=${id} onclick="addToCart(${id})">Add to Cart</button>
+                        <button class="card-btn product-btn add-cart" id=${id} onclick="addToCart(${id})">Add to Cart</button>
                     </div>  
                 </div>`
         })
@@ -117,7 +112,7 @@ function displayProducts(allProducts) {
                         <p>Eau du Parfum | 50mL </p>
                         <p class="price-span">$${price}</p>
                         <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn" id=${id} onclick="addToCart(${id})">Add to Cart</button>
+                        <button class="card-btn product-btn add-cart" id=${id} onclick="addToCart(${id})">Add to Cart</button>
                     </div>  
                 </div>`
         })
@@ -126,143 +121,12 @@ function displayProducts(allProducts) {
 
 
 
-// ********************* CART MODAL ************************************
-
-
-
-function openCart() {
-    const cartBtn = document.querySelector(".cart-container")
-    cartBtn.addEventListener("click", seeModal)
-}
-
-function seeModal() {
-    const body = document.body
-    const cartModal = document.querySelector(".modal")
-    cartModal.classList.remove("hide")
-    body.classList.add("modal-open")
-    // alert("cart opened! Shazam!")
-}
-
-function closeCart() {
-    const closeBtn = document.querySelector(".closeX")
-    closeBtn.addEventListener("click", closeModal)
-}
-
-function closeModal() {
-    const body = document.body
-    const cartModal = document.querySelector(".modal")
-    cartModal.classList.add("hide")
-    body.classList.remove("modal-open")
-    // alert("cart closed! Shazam!")
-}
-
-
-
-
 // ********************* CART ************************************
 
+const cartIcon = document.querySelector("#cart-icon")
+const cart = document.querySelector(".cart")
+const cartClose = document.querySelector("#cart-close")
 
+cartIcon.addEventListener("click", () => cart.classList.add("active"))
+cartClose.addEventListener("click", () => cart.classList.remove("active"))
 
-function addToCart(id) {
-    const searchCart = cart.find(product => product.id === id)
-    if (searchCart) {
-        alert("Product already added to cart")
-    } else {
-        const oldProduct = allProducts.find(product => product.id === id)
-        cart.push({ ...oldProduct, quantity: 1 })
-    }
-    console.log(product.id)
-    shoppingCart()
-    
-}
-
-function shoppingCart() {
-    const cartList = document.querySelector("#cart-list")
-    const cartTotal = document.querySelector("#cart-total")
-    const cartNumber = document.querySelector(".cart-number-container")
-    let cartHTML = "";
-
-    cart
-        .map((product) => {
-            const { name, price, quantity, id } = product;
-            cartHTML += `
-                <li id="item-container">
-                    <div class="cart-title">
-                        <h3>${name}</h3>
-                    </div>
-                    <div class="cart-quantity-container">
-                        <p class="cart-price">$${price} price</p>
-                        <div class="button-quantity-container">
-                            <button class="plus" onclick="increment(${id}, event)">+</button> 
-                            <p class="price-span">${quantity}</p>
-                            <button class="minus" onclick="decrement(${id}, event)">-</button>
-                        </div>
-                        <p id="item-total">$${(price * quantity)} price * quantity</p>
-                        
-                    </div>
-                    <div class="remove-cart-item">
-                        <i class='bx  bx-trash'  style='color:#00032A' onclick="deleteCartItem(${id}, event)"></i> 
-                    </div>
-                </li>
-            `;
-        })
-        .join("");
-    cartList.innerHTML = cartHTML;
-
-    const itemTotals = document.querySelectorAll("#item-total")
-    let sum = 0
-    itemTotals.forEach((itemTotal) => {
-        const numericValue = itemTotal.innerHTML
-        const index = numericValue.indexOf("$")
-        sum += Number(numericValue.slice(index + 1));
-    });
-    cartTotal.innerHTML =
-        // sum > 0
-        // ? 
-        `
-            <button id="checkout" onclick="checkout()"> Proceed to Checkout: $${sum}</button>
-        `
-    // : `No items in your cart`;
-
-    let newSum = 0
-    cart.map((product) => {
-        newSum += product.quantity
-    })
-
-    if (newSum < 1) {
-        cartNumber.classList.add("hide")
-    } else {
-        cartNumber.classList.remove("hide")
-        cartNumber.innerHTML = newSum
-    }
-}
-
-
-function increment(id) {
-    const cartProduct = cart.find((product) => product.id === id)
-    if (cartProduct) {
-        cartProduct.quantity++
-    }
-    shoppingCart()
-}
-
-function decrement(id) {
-    const cartProduct = cart.find((product) => product.id === id)
-    if (cartProduct && cartProduct.quantity > 1) {
-        cartProduct.quantity--
-    }
-    shoppingCart()
-}
-
-function deleteCartItem(id) {
-    cart = cart.filter((product) => product.id !== id)
-    shoppingCart()
-}
-
-// function checkout() {
-//     const checkoutBtn = document.querySelector("#checkout")
-//     const cartList = document.querySelector("#cart-list")
-//     cart = []
-//     shoppingCart()
-//     cartList.innerHTML = `<p class="checkout-message">Thank you for your purchase!</p>`
-// }
