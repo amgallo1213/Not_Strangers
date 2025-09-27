@@ -105,7 +105,7 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 #burger-menu-icon   {
