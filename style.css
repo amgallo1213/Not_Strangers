@@ -329,10 +329,6 @@ nav a {
 }
 
 
-
-
-
-
 /* -------------------------- HERO ------------------------------------ */
 
 
@@ -415,7 +411,31 @@ h2 {
 
 /* -------------------------- BEST SELLERS ------------------------------------ */
 
-#best-sellers {
+.product-grid-wrapper  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    padding: 36px 16px;
+}
+
+.product-box    {
+    padding: 12px;
+}
+
+.product-box .img-box   {
+    display: flex;
+    /* border-radius: 6px; */
+    overflow: hidden;
+}
+
+.img-box img    {
+    height: 420px;
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* #best-sellers {
     margin-top: 48px;
     margin-bottom: 48px;
 }
@@ -441,9 +461,9 @@ h3 {
 .card {
     margin-bottom: 24px;
     cursor: pointer;
-}
+} */
 
-.card-subgrid {
+/* .card-subgrid {
     display: grid;
     grid-template-rows: subgrid;
 }
@@ -460,16 +480,16 @@ h3 {
     transition: all 0.3s;
 }
 
-.price-span {
+.price {
     font-size: 1.4rem;
 }
 
-.card-name {
+.product-title {
     padding-top: 16px;
     padding-bottom: 16px;
-}
+} */
 
-.card-btn {
+/* .card-btn {
     background-color: transparent;
     height: 40px;
     width: 120px;
@@ -492,7 +512,7 @@ h3 {
 
 .card-btn:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}
+} */
 
 
 
@@ -833,7 +853,7 @@ footer {
 
 /* -------------------------- CART PAGE ------------------------------------ */
 
-.total-title {
+/* .total-title {
     padding-top: 10px;
 }
 
@@ -864,7 +884,7 @@ footer {
 
 .cart-btn:focus {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}
+} */
 
 
 /* -------------------------- MEDIA QUERIES ------------------------------------ */

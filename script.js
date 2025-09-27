@@ -1,7 +1,8 @@
-/* -------------------------- NAV ------------------------------------ */
+// NOT STRANGERS SCRIPT
 
+/* -------------------------- OPEN AND CLOSE MOBILE NAV ------------------------------------ */
 
-function openMobileNav() {
+const openMobileNav = () => {
     const openNav = document.querySelector(".mobile-menu")
     openNav.classList.add("fade-in")
     openNav.style.display = "block"
@@ -10,7 +11,7 @@ function openMobileNav() {
     overflow.style.overflow = "hidden"
 }
 
-function closeMobileNav() {
+const closeMobileNav = () => {
     const closeNav = document.querySelector(".mobile-menu")
     closeNav.classList.add("fade-out")
     closeNav.style.display = "none"
@@ -23,105 +24,46 @@ function closeMobileNav() {
 }
 
 
+/* --------------------------  ADD PRODUCTS FROM FILE ------------------------------------ */
 
-// ********************* DATA ************************************
+const productContainer = document.querySelector(".product-grid-wrapper")
+const isProductDetailPage = document.querySelector(".product-detail")
 
-document.addEventListener("DOMContentLoaded", initialise)
-
-let allProducts
-
-
-function initialise() {
-    fetchData();
+if (productContainer) {
+    displayProducts()
+} else if (isProductDetailPage) {
+    displayProductDetail()
 }
 
-async function fetchData() {
-    // try {
-        let response = await fetch("./data.json");
-        let data = await response.json();
-        allProducts = data
-        console.log(data);
-        displayProducts(allProducts)
-//     } catch (error) {
-//         console.error(error)
-//     }
-}
+function displayProducts() {
+    products.forEach(product => {
+        const productCard = document.createElement("div")
+        productCard.classList.add("product-box")
+        productCard.innerHTML =
+        `
+            <div class="img-box">
+                <img src="${product.img}" alt="" class="image">
+            </div>
+            <h2 class="product-title">${product.name}</h2>
+            <div class="price-and-cart">
+                <span class="price">$${product.price}</span>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        `
+        productContainer.appendChild(productCard)
 
-// fetchData();
-
-function displayProducts(allProducts) {
-
-    const bestSellers = document.querySelector(".best-sellers-card-grid-wrapper")
-    allProducts
-        .map((product) => {
-            const { name, id, price } = product
-            if (product.bestSeller === true)
-                bestSellers.innerHTML +=
-
-                    `<div class="card" >
-                    <div class="card-img-container" >
-                        <img src="images/venn.jpg" alt="" class="image">
-                    </div>
-                    <div class="card-subgrid">
-                        <h4 class="card-name">${name}</h4>
-                        <p>Eau du Parfum | 50mL </p>
-                        <p class="price-span">$${price}</p>
-                        <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn add-cart" id=${id} onclick="addToCart()">Add to Cart</button>
-                    </div>  
-                </div>`
+        const imgBox = productCard.querySelector(".img-box")
+        imgBox.addEventListener("click", () => {
+            sessionStorage.setItem("selectedProduct", JSON.stringify(product))
+            window.location.href = "product-details.html"
         })
-        .join("")
-
-
-    const lighterPerfumes = document.querySelector('.lighter-card-grid-wrapper')
-    allProducts
-        .map((product) => {
-            const { name, id, price } = product
-            if (product.category === "lighter")
-                lighterPerfumes.innerHTML +=
-
-                    `<div class="card" >
-                    <div class="card-img-container" >
-                        <img src="images/venn.jpg" alt="" class="image">
-                    </div>
-                    <div class="card-subgrid">
-                        <h4 class="card-name">${name}</h4>
-                        <p>Eau du Parfum | 50mL </p>
-                        <p class="price-span">$${price}</p>
-                        <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn add-cart" id=${id} onclick="addToCart(${id})">Add to Cart</button>
-                    </div>  
-                </div>`
-        })
-        .join("")
-
-    const heavierPerfumes = document.querySelector('.heavier-card-grid-wrapper')
-    allProducts
-        .map((product) => {
-            const { name, id, price } = product
-            if (product.category === "heavier")
-                heavierPerfumes.innerHTML +=
-
-                    `<div class="card" >
-                    <div class="card-img-container" >
-                        <img src="images/venn.jpg" alt="" class="image">
-                    </div>
-                    <div class="card-subgrid">
-                        <h4 class="card-name">${name}</h4>
-                        <p>Eau du Parfum | 50mL </p>
-                        <p class="price-span">$${price}</p>
-                        <p class="price-span">ID: ${id}</p>
-                        <button class="card-btn product-btn add-cart" id=${id} onclick="addToCart(${id})">Add to Cart</button>
-                    </div>  
-                </div>`
-        })
-        .join("")
+    })
 }
 
 
 
-// ********************* CART ************************************
+
+/* --------------------------  CART ------------------------------------ */
 
 const cartIcon = document.querySelector("#cart-icon")
 const cart = document.querySelector(".cart")
@@ -130,3 +72,51 @@ const cartClose = document.querySelector("#cart-close")
 cartIcon.addEventListener("click", () => cart.classList.add("active"))
 cartClose.addEventListener("click", () => cart.classList.remove("active"))
 
+
+const addCartButtons = document.querySelectorAll(".add-cart")
+addCartButtons.forEach(button => {
+    button.addEventListener("click", event => {
+        const productBox = event.target.closest(".product-box")
+        addToCart(productBox)
+    })
+})
+
+const cartContent = document.querySelector(".cart-content")
+
+const addToCart = productBox => {
+    const productImgSource = productBox.querySelector("img").src
+    const productTitle = productBox.querySelector(".product-title").textContent
+    const productPrice = productBox.querySelector(".price").textContent
+
+    const cartItems = cartContent.querySelectorAll(".cart-product-title")
+    for (let items of cartItems) {
+        if (items.textContent === productTitle) {
+            alert("Already added to cart")
+            return
+        }
+    }
+
+    const cartBox = document.createElement("div")
+    cartBox.classList.add("cart-box")
+    cartBox.innerHTML =
+        `
+        <img src="${productImgSource}" alt="" class="cart-img">
+        <div class="cart-details">
+            <h2 class="cart-product-title">${productTitle}</h2>
+            <span class="cart-price">${productPrice}</span>
+            <div class="cart-quantity">
+                <button id="decrement">-</button>
+                <span class="number">1</span>
+                <button id="increment">+</button>
+            </div>
+        </div>
+        <i class="ri-delete-bin-line cart-remove"></i>
+    `
+    cartContent.appendChild(cartBox)
+
+    cartBox.querySelector(".cart-remove").addEventListener("click", () => {
+        cartBox.remove()
+        updateCartCount(-1)
+        updateTotalPrice()
+    })
+}
