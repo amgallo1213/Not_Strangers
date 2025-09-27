@@ -60,7 +60,28 @@ function displayProducts() {
     })
 }
 
+function displayProductDetail () {
+    const productData = JSON.parse(sessionStorage.getItem("selectedProduct"))
 
+    const titleEl = document.querySelector(".name")
+    const priceEl = document.querySelector(".price")
+    const descriptionEl = document.querySelector(".description")
+    const headNoteEl = document.querySelector(".headNote")
+    const heartNoteEl = document.querySelector(".heartNote")
+    const baseNoteEl = document.querySelector(".baseNote")
+    const addToCartBtn = document.querySelector("#add-cart")
+
+    titleEl.textContent = productData.name
+    priceEl.textContent = productData.price
+    descriptionEl.textContent = productData.description
+    headNoteEl.textContent = productData.notes.headNote
+    heartNoteEl.textContent = productData.notes.heartNote
+    baseNoteEl.textContent = productData.notes.baseNote
+
+    addToCartBtn.addEventListener("click", () => {
+        // addToCart(productData)
+    })
+}
 
 
 /* --------------------------  CART ------------------------------------ */
