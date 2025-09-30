@@ -64,23 +64,27 @@ function displayProductDetail () {
     const productData = JSON.parse(sessionStorage.getItem("selectedProduct"))
 
     const titleEl = document.querySelector(".name")
+    const imgEl = document.querySelector(".product-detail-image")
+    const crumbNameEl = document.querySelector(".crumbName")
     const priceEl = document.querySelector(".price")
     const descriptionEl = document.querySelector(".description")
-    const headNoteEl = document.querySelector(".headNote")
-    const heartNoteEl = document.querySelector(".heartNote")
-    const baseNoteEl = document.querySelector(".baseNote")
+    const headNoteEl = document.querySelector(".head")
+    const heartNoteEl = document.querySelector(".heart")
+    const baseNoteEl = document.querySelector(".base")
     const addToCartBtn = document.querySelector("#add-cart")
 
     titleEl.textContent = productData.name
+    imgEl.src = productData.img
+    crumbNameEl.textContent = productData.name
     priceEl.textContent = productData.price
     descriptionEl.textContent = productData.description
-    headNoteEl.textContent = productData.notes.headNote
-    heartNoteEl.textContent = productData.notes.heartNote
-    baseNoteEl.textContent = productData.notes.baseNote
+    headNoteEl.textContent = productData.notes[0].head
+    heartNoteEl.textContent = productData.notes[0].heart
+    baseNoteEl.textContent = productData.notes[0].base
 
-    addToCartBtn.addEventListener("click", () => {
-        // addToCart(productData)
-    })
+    // addToCartBtn.addEventListener("click", () => {
+    //     addToCart(productData)
+    // })
 }
 
 

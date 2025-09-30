@@ -48,11 +48,26 @@ img {
     object-fit: cover;
 }
 
-h1 {
-    letter-spacing: 2px;
-    font-size: clamp(2.1rem, 2.9vw, 3.1rem);
-    text-align: center;
+
+/* -------------------------- FIX MEEEEE ------------------------------------ */
+
+.preview-img    {
+    height: 400px;
+    padding: 24px;
 }
+
+.preview-h2 {
+    padding: 24px;
+}
+
+.preview-h1 {
+    padding: 24px;
+    font-size: 1.75rem;
+}
+
+
+/* ------------------------------ HEADER ---------------------------- */
+
 
 .shipping-offer {
     text-align: center;
@@ -312,9 +327,10 @@ nav a {
     width: 110px;
     border: 1px solid #00032A;
     border-radius: 5px;
-    margin: 20px auto 0;
+    /* margin: 20px auto 0; */
+    margin-top: 16px;
     padding: 0.1rem;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
 }
@@ -361,6 +377,7 @@ h1 {
     text-align: left;
     text-transform: uppercase;
     background-clip: text;
+    letter-spacing: 2px;
 }
 
 h2 {
@@ -428,6 +445,10 @@ h2 {
     padding: 12px;
 }
 
+.product-title  {
+    padding: 12px 12px 12px 0;
+}
+
 .product-box .img-box   {
     display: flex;
     /* border-radius: 6px; */
@@ -474,18 +495,6 @@ h2 {
     padding-top: 12px;
     padding-left: 60px;
     font-size: clamp(0.7rem, 8.9vw, 1.7rem);
-}
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5
-    }
-
-    to {
-        opacity: 1;
-        scale: 1
-    }
 }
 
 .f-h4-span {
@@ -561,10 +570,11 @@ h2 {
 .about-container {
     display: flex;
     flex-direction: row;
-    height: 80vh;
+    height: 70vh;
 }
 
 .about-h3 {
+    text-align: center;
     padding-top: 64px;
     padding-bottom: 0;
     font-size: clamp(1rem, 9vw, 2rem);
@@ -574,10 +584,14 @@ h2 {
     line-height: 1.25;
     font-size: max(1.2rem, 1.2vw);
     padding: 40px 60px;
+    margin-top: 64px;
 }
 
 .about-img {
-    padding-top: 40px;
+    padding: 40px;
+    animation: appear linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
 }
 
 
@@ -637,36 +651,94 @@ h2 {
 }
 
 
-/* -------------------------- PREVIEW ------------------------------------ */
+/* -------------------------- PRODUCT DETAIL PAGE ------------------------------------ */
 
 
 
-.preview {
+.product-detail {
+    margin-top: 48px;
     display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-    padding: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 120px;
 }
 
-h2 {
-    font-size: 2rem;
-    padding: 24px;
-}
 
 .description    {
+    padding: 0 64px 48px 48px;
+    color: #484c61;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.product-detail-h1 {
+    font-size: 3rem;
     padding: 48px;
 }
 
-.preview-h1 {
-    font-size: 3rem;
-    padding: 24px;
+
+.notes    {
+    font-size: 1.25rem;
+    padding-left: 48px;
 }
 
-.preview-img {
-    height: 400px;
+.price-span, .size {
+    padding-left: 48px;
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-top: 16px;
 }
 
 
+.breadcrumb  {
+    padding-left: 48px;
+    margin-top: 0;
+}
+
+.breadcrumb-link    {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+ul.breadcrumb li    {
+    display: inline;
+    font-size: 1em;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.breadcrumb-link:hover    {
+    text-decoration: underline;
+    color: #f6eeec;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #00032A;
+    content: "/\00a0";
+}
+
+.product-detail-btn {
+    background-color: transparent;
+    height: 40px;
+    width: 120px;
+    border: 1px solid #f6eeec;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: smaller;
+    color: #00032A;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    background-color: #f6eeec;
+    margin-left: 48px;
+    margin-top: 16px;
+}
+
+.product-detail-btn:hover {
+    transform: translate3d(0, 2px, 0);
+    cursor: pointer;
+}
 
 /* -------------------------- LOGIN PAGE ------------------------------------ */
 
@@ -845,6 +917,20 @@ footer {
     
     .cart   {
         width: 100%;
+    }
+    .product-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 60px;
+    }
+    .product-detail-image   {
+        padding: 16px;
+    }
+    .description    {
+        padding: 16px;
     }
 }
 

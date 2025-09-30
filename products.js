@@ -23,7 +23,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "chocolate", "heart": "hair dryer", "base": "tar" }
         ],
         "price": 150,
         "size": 30,
