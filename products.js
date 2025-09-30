@@ -3,7 +3,7 @@ const products = [
         "id": 521688,
         "quantity": 1,
         "name": "Beach Witch",
-        "img": "images/beach_witch.jpeg",
+        "img": "../images/beach_witch.jpeg",
         "category": "lighter",
         "bestSeller": true,
         "keyWords": "",
@@ -18,7 +18,7 @@ const products = [
         "id": 405233,
         "quantity": 1,
         "name": "Humidity Extinguisher",
-        "img": "images/venn.jpg",
+        "img": "../images/venn.jpg",
         "bestSeller": true,
         "category": "heavier",
         "keyWords": "",
@@ -33,7 +33,7 @@ const products = [
         "id": 324544,
         "quantity": 1,
         "name": "All Inclusive Vibe",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "bestSeller": true,
         "category": "lighter",
         "keyWords": "",
@@ -49,7 +49,7 @@ const products = [
         "id": 623088,
         "quantity": 1,
         "name": "Abandoned Saints",
-        "img": "images/venn.jpg",
+        "img": "../images/venn.jpg",
         "bestSeller": true,
         "category": "lighter",
         "keyWords": "",
@@ -65,7 +65,7 @@ const products = [
         "id": 115786,
         "quantity": 1,
         "name": "Ibn Sina",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "lighter",
         "keyWords": "",
         "notes": [
@@ -80,7 +80,7 @@ const products = [
         "id": 545861,
         "quantity": 1,
         "name": "Crashing Sexual Traffic",
-        "img": "images/venn.jpg",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "keyWords": "",
         "notes": [
@@ -95,7 +95,7 @@ const products = [
         "id": 909261,
         "quantity": 1,
         "name": "Stevie Nick's Piano Tuner",
-        "img": "images/Stevie.jpg",
+        "img": "../images/Stevie.jpg",
         "category": "lighter",
         "keyWords": "",
         "notes": [
@@ -110,7 +110,7 @@ const products = [
         "id": 234513,
         "quantity": 1,
         "name": "Lukewarm Champagne",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "lighter",
         "keyWords": "",
         "notes": [
@@ -125,7 +125,7 @@ const products = [
         "id": 780489,
         "quantity": 1,
         "name": "Shogun Assassin",
-        "img": "images/venn.jpg",
+        "img": "../images/ShogunAssassin.webp",
         "category": "lighter",
         "keyWords": "",
         "notes": [
@@ -139,7 +139,7 @@ const products = [
         "id": 838487,
         "quantity": 1,
         "name": "Awake Before Dawn",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "heavier",
         "keyWords": "",
         "notes": [
@@ -153,7 +153,7 @@ const products = [
         "id": 725037,
         "quantity": 1,
         "name": "A Complex Proposition",
-        "img": "images/venn.jpg",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "",
         "notes": [
@@ -167,7 +167,7 @@ const products = [
         "id": 278997,
         "quantity": 1,
         "name": "Scrumptus Precision",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "heavier",
         "keyWords": "",
         "notes": [
@@ -181,7 +181,7 @@ const products = [
         "id": 43641,
         "quantity": 1,
         "name": "Happy Indeed",
-        "img": "images/venn.jpg",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "",
         "notes": [
@@ -195,7 +195,7 @@ const products = [
         "id": 374871,
         "quantity": 1,
         "name": "Hungry Water",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "heavier",
         "keyWords": "",
         "notes": [
@@ -209,7 +209,7 @@ const products = [
         "id": 715360,
         "quantity": 1,
         "name": "All the Swans",
-        "img": "images/venn.jpg",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "",
         "notes": [
@@ -223,7 +223,7 @@ const products = [
         "id": 295944,
         "quantity": 1,
         "name": "The Little Thief",
-        "img": "images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "heavier",
         "keyWords": "",
         "notes": [

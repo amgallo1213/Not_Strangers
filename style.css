@@ -46,6 +46,7 @@ img {
     display: block;
     max-width: 100%;
     object-fit: cover;
+    /* height: auto; */
 }
 
 
@@ -455,10 +456,11 @@ h2 {
     overflow: hidden;
 }
 
-.img-box img    {
+.img-box .product-image    {
     height: 420px;
     width: 100%;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 

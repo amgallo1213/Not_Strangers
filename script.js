@@ -42,7 +42,7 @@ function displayProducts() {
         productCard.innerHTML =
         `
             <div class="img-box">
-                <img src="${product.img}" alt="" class="image">
+                <img src="${product.img}" alt="" class="product-image">
             </div>
             <h2 class="product-title">${product.name}</h2>
             <div class="price-and-cart">
@@ -55,7 +55,7 @@ function displayProducts() {
         const imgBox = productCard.querySelector(".img-box")
         imgBox.addEventListener("click", () => {
             sessionStorage.setItem("selectedProduct", JSON.stringify(product))
-            window.location.href = "product-details.html"
+            window.location.href = "../product-details/product-details.html"
         })
     })
 }
@@ -71,7 +71,7 @@ function displayProductDetail () {
     const headNoteEl = document.querySelector(".head")
     const heartNoteEl = document.querySelector(".heart")
     const baseNoteEl = document.querySelector(".base")
-    const addToCartBtn = document.querySelector("#add-cart")
+    const addToCartBtn = document.querySelector(".add-cart")
 
     titleEl.textContent = productData.name
     imgEl.src = productData.img
@@ -82,9 +82,9 @@ function displayProductDetail () {
     heartNoteEl.textContent = productData.notes[0].heart
     baseNoteEl.textContent = productData.notes[0].base
 
-    // addToCartBtn.addEventListener("click", () => {
-    //     addToCart(productData)
-    // })
+    addToCartBtn.addEventListener("click", () => {
+        addToCart()
+    })
 }
 
 

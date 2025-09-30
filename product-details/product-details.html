@@ -10,27 +10,26 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="../style.css">
 
-
-    <title>Not Strangers | Learn</title>
+    <title>Not Strangers | Perfume</title>
 </head>
 <body>
-
+    
     <header>
         <div class="shipping-offer">Free U.S. shipping on orders over $150</div>
         <nav role="navigation">
             <div class="nav-child">
-                <a href="index.html" class="logo">Not Strangers</a>
-                <a href="shop.html">Shop</a>
-                <a href="learn.html">Learn</a>
-                <a href="about.html">About</a>
+                <a href="../home/index.html" class="logo">Not Strangers</a>
+                <a href="../shop/shop.html">Shop</a>
+                <a href="../learn/learn.html">Learn</a>
+                <a href="../about/about.html">About</a>
             </div>
 
             <div class="nav-child" id="mobile-menu-nav">
                 <div id="cart-icon">
                     <i class="ri-shopping-bag-line icon"></i>
-                    <span class="cart-item-count"></span>
+                    <span class="cart-item-count">2</span>
                 </div>
                 <i class="ri-menu-line" id="burger-menu-icon" title="button to open mobile navigation"
                     onclick="openMobileNav()"></i>
@@ -41,10 +40,10 @@
     <div class="mobile-menu">
         <i class="ri-close-line mobile-menu-close" onclick="closeMobileNav()"></i>
         <div class="mobile-menu-links">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="learn.html">Learn</a>
-            <a href="about.html">About</a>
+            <a href="../home/index.html">Home</a>
+            <a href="../shop/shop.html">Shop</a>
+            <a href="../learn/learn.html">Learn</a>
+            <a href="../about/about.html">About</a>
         </div>
     </div>
 
@@ -57,43 +56,43 @@
             <div class="total-title">Total</div>
             <div class="total-price">$0</div>
         </div>
-        <a href="cart.html"><button class="btn-buy">Checkout</button></a>
+        <a href="../cart-page/cart.html"><button class="btn-buy">Checkout</button></a>
         <i class="ri-close-line" id="cart-close"></i>
     </div>
 
 
-    <main >
-        <div class="preview">
-            <h1 class="preview-h1">Fancy that!</h1>
-            <img src="images/more bottles.jpg" alt="" class="preview-img">
-            <h2 class="preview-h2">Coming Soon...</h2>
-        </div>
-            
-
-
-        <section id="main-email">
+    <main>
+        <div class="product-detail">
             <div>
-                <h4 class="email-h4">Keep in Touch</h4>
-                <p class="email-p">Get 10% off your first order, plus exclusive members only offers and promotions</p>
+                <img src="" alt="" class="product-detail-image">
             </div>
-            <div >
-                <form action="submit">
-                    <input type="email" name="" id="email-input" placeholder="Your Email">
-                    <button class="email-btn">Sign Up</button>
-                </form>  
+            
+            <div class="product-detail-info">
+                <ul class="breadcrumb">
+                    <li><a href="../home/index.html" class="breadcrumb-link">Home</a></li>
+                    <li><a href="../shop/shop.html" class="breadcrumb-link">Shop</a></li>
+                    <li class="crumbName"></li>
+                </ul>
+                <h1 class="product-detail-h1 name"></h1>
+                <p class="description"></p>
+                <p class="notes">Head Notes: <span class="head"></span></p>
+                <p class="notes">Heart Notes: <span class="heart" ></span></p>
+                <p class="notes">Base Notes: <span class="base" ></span></p>
+                <p class="size">30 mL</p>
+                <p class="price-span">$<span class="price"></span></p>
+                <button class="add-cart product-detail-btn" >Add to Cart</button>
             </div>
-        </section>
+            
+        </div>
     </main>
-
-
     <footer>
         <div>
             <div>
-                <a href="index.html" class="footer-link">Home</a>
-                <a href="about.html" class="footer-link">About</a>
-                <a href="learn.html" class="footer-link">Learn</a>
-                <a href="shop.html" class="footer-link">Shop</a>
-                <a href="cart.html" class="footer-link">Cart</a>
+                <a href="../home/index.html" class="footer-link">Home</a>
+                <a href="../about/about.html" class="footer-link">About</a>
+                <a href="../learn/learn.html" class="footer-link">Learn</a>
+                <a href="../shop/shop.html" class="footer-link">Shop</a>
+                <!-- <a href="cart-page/cart.html" class="footer-link">Cart</a> -->
             </div>
             <div>
                 <i class='bx bxl-instagram bx-sm social-icon' ></i> 
@@ -107,7 +106,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-
+    <script src="../script.js"></script>
 </body>
 </html>
+
+
+
