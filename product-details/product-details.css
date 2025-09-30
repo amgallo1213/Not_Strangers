@@ -1,0 +1,87 @@
+/* -------------------------- PRODUCT DETAIL PAGE ------------------------------------ */
+
+
+
+.product-detail {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-bottom: 120px;
+}
+
+
+.description    {
+    padding: 0 64px 48px 48px;
+    color: #484c61;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.product-detail-h1 {
+    font-size: 3rem;
+    padding: 48px;
+}
+
+
+.notes    {
+    font-size: 1.25rem;
+    padding-left: 48px;
+}
+
+.price-span, .size {
+    padding-left: 48px;
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-top: 16px;
+}
+
+.breadcrumb  {
+    padding-left: 48px;
+    margin-top: 0;
+}
+
+.breadcrumb-link    {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+ul.breadcrumb li    {
+    display: inline;
+    font-size: 1em;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.breadcrumb-link:hover    {
+    text-decoration: underline;
+    color: #f6eeec;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #00032A;
+    content: "/\00a0";
+}
+
+.product-detail-btn {
+    background-color: transparent;
+    height: 40px;
+    width: 120px;
+    border: 1px solid #f6eeec;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: smaller;
+    color: #00032A;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    background-color: #f6eeec;
+    margin-left: 48px;
+    margin-top: 16px;
+}
+
+.product-detail-btn:hover {
+    transform: translate3d(0, 2px, 0);
+    cursor: pointer;
+}

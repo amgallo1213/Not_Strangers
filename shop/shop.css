@@ -1,0 +1,33 @@
+.shop-h2    {
+    text-align: center;
+    padding: 24px;
+}
+
+.product-grid-wrapper  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    padding: 36px 16px;
+}
+
+.product-box    {
+    padding: 12px;
+}
+
+.product-title  {
+    padding: 12px 12px 12px 0;
+}
+
+.product-box .img-box   {
+    display: flex;
+    /* border-radius: 6px; */
+    overflow: hidden;
+}
+
+.img-box .product-image    {
+    height: 420px;
+    width: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+}
