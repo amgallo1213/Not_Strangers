@@ -765,11 +765,6 @@ footer {
         justify-content: space-evenly;
     }
 
-    .modal-content  {
-        width: 90%;
-        height: 90vh;
-    }
-
     #item-container  {
         display: flex;
         flex-direction: column;
@@ -783,6 +778,8 @@ footer {
     .button-quantity-container  {
         margin: 16px;
     }
+
+   
 
 }
 

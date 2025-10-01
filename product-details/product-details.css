@@ -1,7 +1,5 @@
 /* -------------------------- PRODUCT DETAIL PAGE ------------------------------------ */
 
-
-
 .product-detail {
     margin-top: 48px;
     display: flex;
@@ -11,7 +9,6 @@
     padding-right: 200px;
     margin-bottom: 120px;
 }
-
 
 .description    {
     padding: 0 64px 48px 48px;
@@ -85,3 +82,24 @@ ul.breadcrumb li+li:before {
     transform: translate3d(0, 2px, 0);
     cursor: pointer;
 }
+
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) {
+     .product-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 60px;
+    }
+    .product-detail-image   {
+        padding: 16px;
+    }
+    .description    {
+        padding: 16px;
+    }
+  }
