@@ -23,7 +23,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "chocolate", "heart": "hair dryer", "base": "tar" }
+            { "head": "grapefruit", "heart": "salt", "base": "lemon" }
         ],
         "price": 150,
         "size": 30,
@@ -38,7 +38,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "black currant, basil", "heart": "cinnamon, cypress", "base": "cedar, myrrh" }
         ],
         "price": 150,
         "size": 30,
@@ -54,7 +54,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "jasmine, iris", "heart": "tonka bean", "base": "musk" }
         ],
         "price": 150,
         "size": 30,
@@ -99,7 +99,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "fig", "heart": "cardamom, toasted coconut", "base": "sandalwood" }
         ],
         "price": 150,
         "size": 30,
@@ -114,7 +114,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "Chrysanthemum, chamomile", "heart": "white tea", "base": "barley, honey" }
         ],
         "price": 150,
         "size": 30,
@@ -129,7 +129,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "Bergamot", "heart": "Juniper Berry", "base": "Oakmoss, Patchouli" }
         ],
         "price": 150,
         "size": 30,
@@ -185,7 +185,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "saffron", "heart": "vanilla", "base": "amber" }
         ],
         "price": 150,
         "size": 30,
@@ -213,7 +213,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "white grape", "heart": "peony", "base": "sandalwood" }
         ],
         "price": 150,
         "size": 30,
@@ -227,7 +227,34 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "ginger", "heart": "neroli, jasmine", "base": "vetiver" }
+        ],
+        "price": 150,
+        "size": 30,
+        "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
+    },
+    {
+        "id": 612458,
+        "quantity": 1,
+        "name": "Memory is Molecular",
+        "img": "../images/venn.jpg",
+        "category": "heavier",
+        "keyWords": "",
+        "notes": [
+            { "head": "yuzu", "heart": "jasmine", "base": "moss, vinyl" }
+        ],
+        "price": 150,
+        "size": 30,
+        "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
+    },{
+        "id": 179366,
+        "quantity": 1,
+        "name": "Planet of the Oud",
+        "img": "../images/venn.jpg",
+        "category": "heavier",
+        "keyWords": "",
+        "notes": [
+            { "head": "violet", "heart": "vanilla", "base": "amber, rose" }
         ],
         "price": 150,
         "size": 30,

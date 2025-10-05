@@ -114,8 +114,8 @@ const addToCart = productBox => {
     const productPrice = productBox.querySelector(".price").textContent
 
     const cartItems = cartContent.querySelectorAll(".cart-product-title")
-    for (let items of cartItems) {
-        if (items.textContent === productTitle) {
+    for (let item of cartItems) {
+        if (item.textContent === productTitle) {
             alert("Already added to cart")
             return
         }
@@ -136,7 +136,7 @@ const addToCart = productBox => {
             </div>
         </div>
         <i class="ri-delete-bin-line cart-remove"></i>
-    `
+    `;
     cartContent.appendChild(cartBox)
 
     cartBox.querySelector(".cart-remove").addEventListener("click", () => {
@@ -156,7 +156,6 @@ const addToCart = productBox => {
             if (quantity === 1) {
                 decrementButton.style.color = "#999"
             } 
-            
         } else
 
         if (event.target.id === "increment") {
@@ -164,10 +163,27 @@ const addToCart = productBox => {
             decrementButton.style.color = "#333"
         }
         numberElement.textContent = quantity
-
+        updateTotalPrice()
     })
     updateCartCount(1)
+    updateTotalPrice()
 }
+
+const updateTotalPrice = () => {
+    const totalPriceElement = document.querySelector(".total-price")
+    const cartBoxes = document.querySelectorAll(".cart-box")
+
+    let total = 0
+    cartBoxes.forEach(cartBox => {
+        const priceElement = cartBox.querySelector(".cart-price")
+        const quantityElement = cartBox.querySelector(".number")
+        const price = priceElement.textContent.replace("$", "")
+        const quantity = quantityElement.textContent
+        total += price * quantity
+    })
+    totalPriceElement.textcontent = `$${total}`
+}
+
 
 let cartItemCount = 0
 const updateCartCount = change => {
@@ -181,3 +197,18 @@ const updateCartCount = change => {
         cartItemCountBadge.textContent = ""
     }
 }
+
+
+const buyNowButton = document.querySelector(".btn-buy")
+buyNowButton.addEventListener("click", () => {
+    const cartBoxes = cartContent.querySelectorAll(".cart-box")
+    if (cartBoxes.length === 0) {
+        alert("Your cart is empty. Please continue shopping.")
+        return
+    } 
+    cartBoxes.forEach(cartBox => cartBox.remove())
+    cartItemCount = 0
+    updateCartCount(0)
+    updateTotalPrice()
+    alert("Thank you for your purchase!")
+})
