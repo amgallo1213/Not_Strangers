@@ -212,3 +212,8 @@ buyNowButton.addEventListener("click", () => {
     updateTotalPrice()
     alert("Thank you for your purchase!")
 })
+
+
+
+
+
