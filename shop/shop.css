@@ -13,9 +13,6 @@
 
 .product-box    {
     padding: 12px;
-    &:hover {
-        border: 1px solid black;
-    }
 }
 
 .product-title  {
