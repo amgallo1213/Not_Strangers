@@ -235,6 +235,20 @@ const products = [
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
     {
+        "id": 886241,
+        "quantity": 1,
+        "name": "Swim Team Birthday Party",
+        "img": "../images/Hungry_Water.webp",
+        "category": "lighter",
+        "keyWords": "",
+        "notes": [
+            { "head": "chlorine", "heart": "oreos", "base": "musk" }
+        ],
+        "price": 210,
+        "size": 30,
+        "description" : "In a society where every man is supposed to be endowed more or less with powers which we should call supernatural, it is plain that the distinction between gods and men is somewhat blurred, or rather has scarcely emerged."
+    },
+    {
         "id": 612458,
         "quantity": 1,
         "name": "Memory is Molecular",
@@ -251,7 +265,7 @@ const products = [
         "id": 179366,
         "quantity": 1,
         "name": "Planet of the Oud",
-        "img": "../images/venn.jpg",
+        "img": "../images/Hungry_Water.webp",
         "category": "heavier",
         "keyWords": "",
         "notes": [
