@@ -27,7 +27,8 @@ const products = [
         ],
         "price": 150,
         "size": 30,
-        "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
+        "description" : "In a society where every man is supposed to be endowed more or less with powers which we should call supernatural, it is plain that the distinction between gods and men is somewhat blurred, or rather has scarcely emerged."
+        // "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
     {
         "id": 324544,
@@ -69,7 +70,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "rose", "heart": "rose", "base": "amber" }
         ],
         "price": 150,
         "size": 30,
@@ -157,7 +158,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "Iso E", "heart": "cassis", "base": "cedarwood" }
         ],
         "price": 150,
         "size": 30,
@@ -199,7 +200,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "rosemary, thyme", "heart": "lavender, sage", "base": "orange blossom" }
         ],
         "price": 150,
         "size": 30,

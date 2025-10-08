@@ -34,7 +34,8 @@ h5 {
 }
 
 p {
-    font-family: "Playfair Display", serif;
+    font-family: "Josefin Sans", sans-serif;
+    /* font-family: "Playfair Display", serif; */
 }
 
 a {
@@ -413,6 +414,42 @@ h2 {
 }
 
 
+
+/* -------------------------- BEST SELLERS DIV ------------------------------------ */
+
+.best-sellers-h3    {
+    text-align: center;
+    padding: 48px;
+    font-size: 1.75rem;
+}
+
+.best-sellers-card-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.product-box    {
+    padding: 12px;
+}
+
+.product-title  {
+    padding: 12px 12px 12px 0;
+}
+
+.product-box .img-box   {
+    display: flex;
+    overflow: hidden;
+}
+
+.img-box .product-image    {
+    height: 420px;
+    width: 100%;
+    transition: 0.5s;
+}
+
 /* -------------------------- FEATURES GLOBALS ------------------------------------ */
 
 
@@ -457,9 +494,11 @@ h2 {
 }
 
 .f-p {
-    line-height: 1.25;
-    font-size: max(1.2rem, 1.2vw);
+    line-height: 1.15;
+    font-size: max(1.3rem, 1.3vw);
     padding: 40px 60px;
+    /* font-family: "Playfair Display", serif; */
+    font-weight: 300;
 }
 
 .f-btn {
@@ -532,10 +571,12 @@ h2 {
 }
 
 .about-p {
-    line-height: 1.25;
-    font-size: max(1.2rem, 1.2vw);
+    /* line-height: 1.25; */
+    line-height: 1.15;
+    font-size: max(1.3rem, 1.3vw);
     padding: 40px 60px;
     margin-top: 64px;
+    font-weight: 300;
 }
 
 .about-img {
@@ -615,6 +656,7 @@ footer {
 .footer-link {
     color: #00032A;
     padding: 8px;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .social-icon {

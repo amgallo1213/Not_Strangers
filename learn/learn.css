@@ -4,7 +4,10 @@
 }
 
 .learn-h2 {
-    padding: 24px;
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-bottom: 48px;
+    font-weight: 300;
 }
 
 .learn-h1 {

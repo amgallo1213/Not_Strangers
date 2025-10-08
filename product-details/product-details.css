@@ -13,8 +13,11 @@
 .description {
     padding: 0 64px 48px 48px;
     color: #484c61;
-    font-weight: 500;
-    font-size: 1.1em;
+    /* color: #70748b; */
+    /* font-weight: 500; */
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .product-detail-h1 {
@@ -26,14 +29,17 @@
 .notes {
     font-size: 1.25rem;
     padding-left: 48px;
+    color: #484c61;
+    font-weight: 300;
 }
 
 .price-span,
 .size {
     padding-left: 48px;
-    font-size: 1.5em;
+    font-size: 1.35em;
     margin-top: 0;
     padding-top: 16px;
+    color: #484c61;
 }
 
 .breadcrumb {
