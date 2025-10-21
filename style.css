@@ -191,7 +191,7 @@ nav a {
 
 /* ------------------------------ CART ---------------------------- */
 
-.cart   {
+.panda  {
     position: fixed;
     top: 0;
     right: -100%;  
@@ -206,7 +206,7 @@ nav a {
     transition: 0.5s;
 }
 
-.cart.active    {
+.panda.active    {
     right: 0;
 }
 

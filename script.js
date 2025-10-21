@@ -24,16 +24,20 @@ const closeMobileNav = () => {
 }
 
 
+
 /* --------------------------  ADD PRODUCTS FROM FILE ------------------------------------ */
 
 const productContainer = document.querySelector(".product-grid-wrapper")
 const isProductDetailPage = document.querySelector(".product-detail")
+
 
 if (productContainer) {
     displayProducts()
 } else if (isProductDetailPage) {
     displayProductDetail()
 }
+
+
 
 function displayProducts() {
     products.forEach(product => {
@@ -46,8 +50,8 @@ function displayProducts() {
             </div>
             <h2 class="product-title">${product.name}</h2>
             <div class="price-and-cart">
-                <span class="price">$${product.price}</span>
-                <button class="add-cart btn-buy">Add to Cart</button>
+                <span class="dollars">$${product.dollars}</span>
+                <button class="add-cart shop-btn">Add to Cart</button>
             </div>
         `
         productContainer.appendChild(productCard)
@@ -66,7 +70,7 @@ function displayProductDetail () {
     const titleEl = document.querySelector(".name")
     const imgEl = document.querySelector(".product-detail-image")
     const crumbNameEl = document.querySelector(".crumbName")
-    const priceEl = document.querySelector(".price")
+    const priceEl = document.querySelector(".dollars")
     const descriptionEl = document.querySelector(".description")
     const headNoteEl = document.querySelector(".head")
     const heartNoteEl = document.querySelector(".heart")
@@ -76,7 +80,7 @@ function displayProductDetail () {
     titleEl.textContent = productData.name
     imgEl.src = productData.img
     crumbNameEl.textContent = productData.name
-    priceEl.textContent = productData.price
+    priceEl.textContent = productData.dollars
     descriptionEl.textContent = productData.description
     headNoteEl.textContent = productData.notes[0].head
     heartNoteEl.textContent = productData.notes[0].heart
@@ -85,6 +89,7 @@ function displayProductDetail () {
     addToCartBtn.addEventListener("click", () => {
         addToCart()
     })
+    
 }
 
 
@@ -111,7 +116,7 @@ const cartContent = document.querySelector(".cart-content")
 const addToCart = productBox => {
     const productImgSource = productBox.querySelector("img").src
     const productTitle = productBox.querySelector(".product-title").textContent
-    const productPrice = productBox.querySelector(".price").textContent
+    const productPrice = productBox.querySelector(".dollars").textContent
 
     const cartItems = cartContent.querySelectorAll(".cart-product-title")
     for (let item of cartItems) {
@@ -165,6 +170,7 @@ const addToCart = productBox => {
         numberElement.textContent = quantity
         updateTotalPrice()
     })
+    console.log("STUPID FUCKING PRICE ELEMENT!")
     updateCartCount(1)
     updateTotalPrice()
 }
@@ -177,13 +183,12 @@ const updateTotalPrice = () => {
     cartBoxes.forEach(cartBox => {
         const priceElement = cartBox.querySelector(".cart-price")
         const quantityElement = cartBox.querySelector(".number")
-        const price = priceElement.textContent.replace("$", "")
+        const totalPriceElement = priceElement.textContent.replace("$", "")
         const quantity = quantityElement.textContent
-        total += price * quantity
+        total += totalPriceElement * quantity
     })
     totalPriceElement.textcontent = `$${total}`
 }
-
 
 let cartItemCount = 0
 const updateCartCount = change => {
@@ -215,5 +220,9 @@ buyNowButton.addEventListener("click", () => {
 
 
 
-
+// if (productContainer) {
+//     displayProducts()
+// } else if (isProductDetailPage) {
+//     displayProductDetail()
+// }
 

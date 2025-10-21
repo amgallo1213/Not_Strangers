@@ -10,7 +10,7 @@ const products = [
         "notes": [
             { "head": "salt, orange", "heart": "ylang-ylang", "base": "sandalwood" }
         ],
-        "price": 120,
+        "dollars": 120,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -25,7 +25,7 @@ const products = [
         "notes": [
             { "head": "grapefruit", "heart": "salt", "base": "lemon" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description" : "In a society where every man is supposed to be endowed more or less with powers which we should call supernatural, it is plain that the distinction between gods and men is somewhat blurred, or rather has scarcely emerged."
         // "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
@@ -41,7 +41,7 @@ const products = [
         "notes": [
             { "head": "black currant, basil", "heart": "cinnamon, cypress", "base": "cedar, myrrh" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -57,7 +57,7 @@ const products = [
         "notes": [
             { "head": "jasmine, iris", "heart": "tonka bean", "base": "musk" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -72,7 +72,7 @@ const products = [
         "notes": [
             { "head": "rose", "heart": "rose", "base": "amber" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -87,7 +87,7 @@ const products = [
         "notes": [
             { "head": "", "heart": "", "base": "" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -102,7 +102,7 @@ const products = [
         "notes": [
             { "head": "fig", "heart": "cardamom, toasted coconut", "base": "sandalwood" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -117,7 +117,7 @@ const products = [
         "notes": [
             { "head": "Chrysanthemum, chamomile", "heart": "white tea", "base": "barley, honey" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -132,7 +132,7 @@ const products = [
         "notes": [
             { "head": "Bergamot", "heart": "Juniper Berry", "base": "Oakmoss, Patchouli" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -146,7 +146,7 @@ const products = [
         "notes": [
             { "head": "", "heart": "", "base": "" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -160,7 +160,7 @@ const products = [
         "notes": [
             { "head": "Iso E", "heart": "cassis", "base": "cedarwood" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -174,7 +174,7 @@ const products = [
         "notes": [
             { "head": "", "heart": "", "base": "" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -188,7 +188,7 @@ const products = [
         "notes": [
             { "head": "saffron", "heart": "vanilla", "base": "amber" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -202,7 +202,7 @@ const products = [
         "notes": [
             { "head": "rosemary, thyme", "heart": "lavender, sage", "base": "orange blossom" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -216,7 +216,7 @@ const products = [
         "notes": [
             { "head": "white grape", "heart": "peony", "base": "sandalwood" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -230,7 +230,7 @@ const products = [
         "notes": [
             { "head": "ginger", "heart": "neroli, jasmine", "base": "vetiver" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -244,7 +244,7 @@ const products = [
         "notes": [
             { "head": "chlorine", "heart": "oreos", "base": "musk" }
         ],
-        "price": 210,
+        "dollars": 210,
         "size": 30,
         "description" : "In a society where every man is supposed to be endowed more or less with powers which we should call supernatural, it is plain that the distinction between gods and men is somewhat blurred, or rather has scarcely emerged."
     },
@@ -258,7 +258,7 @@ const products = [
         "notes": [
             { "head": "yuzu", "heart": "jasmine", "base": "moss, vinyl" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },{
@@ -271,7 +271,7 @@ const products = [
         "notes": [
             { "head": "violet", "heart": "vanilla", "base": "amber, rose" }
         ],
-        "price": 150,
+        "dollars": 150,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     },
@@ -285,7 +285,7 @@ const products = [
         "notes": [
             { "head": "blood orange", "heart": "sage", "base": "eucalyptus, tonka" }
         ],
-        "price": 250,
+        "dollars": 250,
         "size": 30,
         "description": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
     }

@@ -34,7 +34,7 @@
             <div class="nav-child" id="mobile-menu-nav">
                 <div id="cart-icon">
                     <i class="ri-shopping-bag-line icon"></i>
-                    <span class="cart-item-count"></span>
+                    <span  class="cart-item-count"></span>
                 </div>
                 <i class="ri-menu-line" id="burger-menu-icon" title="button to open mobile navigation"
                     onclick="openMobileNav()"></i>
@@ -52,16 +52,16 @@
         </div>
     </div>
 
-    <div class="cart">
+    <div class="panda" id="panda">
         <h2 class="cart-title">Your Cart</h2>
         <div class="cart-content">
             <!-- THIS IS WHERE THE CART ITEMS WILL BE  -->
         </div>
         <div class="total">
             <div class="total-title">Total</div>
-            <div class="total-price">$0</div>
+            <div class="total-price">$ <span class="cart-total-price"></span></div>
         </div>
-        <a href="../cart-page/cart.html"><button class="btn-buy">Checkout</button></a>
+        <button class="btn-buy">Checkout</button>
         <i class="ri-close-line" id="cart-close"></i>
     </div>
 
@@ -69,7 +69,7 @@
     <main>
 
         <h2 class="shop-h2">Our Perfumes</h2>
-        <div class="product-grid-wrapper"></div>
+        <div id="product-list" class="product-grid-wrapper"></div>
 
 
         <section id="main-email">
@@ -110,7 +110,8 @@
 
 
     <script src="../products.js"></script>
-    <script src="../script.js"></script>
+    <script src="../script2.js"></script>
+    <!-- <script src="../script.js"></script> -->
 
 </body>
 
