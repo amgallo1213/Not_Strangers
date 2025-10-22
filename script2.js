@@ -26,7 +26,6 @@ const closeMobileNav = () => {
 /* --------------------------  ADD PRODUCTS FROM FILE ------------------------------------ */
 
 
-
 const isProductDetailPage = document.querySelector(".product-detail")
 
 const productList = document.querySelector("#product-list")
@@ -106,6 +105,7 @@ function displayProductDetail () {
 }
 
 
+/* --------------------------  ADD TO CART ------------------------------------ */
 
 // Add to cart
 function addToCart(id) {
@@ -142,7 +142,7 @@ function updateCart() {
                 <h2 class="cart-product-title">${item.name}</h2>
                 <p><span class="cart-price">$${item.dollars} × ${item.quantity}</span></p> 
             </div>
-            <i class="ri-delete-bin-line cart-remove"><button onclick="removeFromCart(${item.id})"></button></i>
+            <i class="ri-delete-bin-line cart-remove" onclick="removeFromCart(${item.id})"></i>
             
             `;
         cartItemsContainer.appendChild(div);

@@ -85,7 +85,7 @@ const products = [
         "category": "lighter",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "pink pepper", "heart": "amber", "base": "orris" }
         ],
         "dollars": 150,
         "size": 30,
@@ -144,7 +144,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "quince", "heart": "pettigrain", "base": "oakmoss" }
         ],
         "dollars": 150,
         "size": 30,
@@ -172,7 +172,7 @@ const products = [
         "category": "heavier",
         "keyWords": "",
         "notes": [
-            { "head": "", "heart": "", "base": "" }
+            { "head": "mandarin", "heart": "almond", "base": "cedar" }
         ],
         "dollars": 150,
         "size": 30,
@@ -265,7 +265,7 @@ const products = [
         "id": 179366,
         "quantity": 1,
         "name": "Planet of the Oud",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/Swans.jpg",
         "category": "heavier",
         "keyWords": "",
         "notes": [
