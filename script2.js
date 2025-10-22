@@ -37,6 +37,8 @@ const cartIcon = document.querySelector("#cart-icon")
 const panda = document.querySelector(".panda")
 const cartClose = document.querySelector("#cart-close")
 
+const checkoutAlert = document.querySelector(".cart-checkout-btn")
+
 cartIcon.addEventListener("click", () => panda.classList.add("active"))
 cartClose.addEventListener("click", () => panda.classList.remove("active"))
 
@@ -56,7 +58,7 @@ function displayProducts() {
             </div>
             <h2 class="product-title">${product.name}</h2>
             <div class="price-and-cart">
-                <span class="dollars">$${product.dollars}</span>
+                <span class="dollars cart-price">$${product.dollars}</span>
                 <button class="shop-btn" onclick="addToCart(${product.id})">Add to Cart</button>
             </div>
 
@@ -87,7 +89,7 @@ function displayProductDetail () {
     const headNoteEl = document.querySelector(".head")
     const heartNoteEl = document.querySelector(".heart")
     const baseNoteEl = document.querySelector(".base")
-    // const addToCartBtn = document.querySelector(".add-cart")
+    const addToCartBtn = document.querySelector(".product-detail-btn")
 
     titleEl.textContent = productData.name
     imgEl.src = productData.img
@@ -98,10 +100,10 @@ function displayProductDetail () {
     heartNoteEl.textContent = productData.notes[0].heart
     baseNoteEl.textContent = productData.notes[0].base
 
-    // addToCartBtn.addEventListener("click", () => {
-    //     addToCart()
-    // })
-    
+    addToCartBtn.addEventListener("click", () => {
+        updateCart()
+    })
+    updateCart()
 }
 
 
@@ -167,6 +169,18 @@ function removeFromCart(id) {
     updateCartCount(1)
 }
 
+function alertCheckout(){
+    // const cartItems = cartItemsContainer.querySelectorAll(".cart-item")
+    // if (cartItems.length === 0) {
+    //     alert("Your cart is empty. Please continue shopping.")
+    //     return
+    // }
+    // cartItems.forEach(cartItem = cartItem.remove())
+    // cartItemCount = 0
+    // updateCartCount(0)
+    // updateTotalPrice()
+    alert("Thank you for shopping with us")
+}
 
 // Number of items in cart
 
