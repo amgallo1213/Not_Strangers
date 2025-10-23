@@ -123,6 +123,7 @@ function addToCart(id) {
     updateCartCount(1)
     updateCart();
     incrementDecrement()
+    updateTotalPrice()
 }
 
 // Update cart display
@@ -166,7 +167,7 @@ function incrementDecrement() {
     const cartItem = document.querySelector(".cart-quantity").addEventListener("click", event => {
         const numberElement = document.querySelector(".number")
         const decrementButton = document.querySelector("#decrement")
-
+        
         let quantity = numberElement.textContent
 
         if (event.target.id === "decrement" && quantity > 1){
@@ -181,12 +182,21 @@ function incrementDecrement() {
             decrementButton.style.color = "#333"
         }
         numberElement.textContent = quantity
-        totalPrice = quantity * dollars
-        updateTotalPrice()
+
+        // totalPrice = quantity * priceCart
+        updateTotalPrice() //this is the one that makes the quantity count change
         updateCart()
     })
+
     updateTotalPrice()
     updateCart()
+}
+
+function updateTotalPrice () {
+    const priceCart = document.querySelector(".cart-price")
+    const numberElement = document.querySelector(".number")
+    let quantity = numberElement.textContent
+    totalPrice = quantity * priceCart
 }
 
 
@@ -235,6 +245,3 @@ if (productList) {
 } else if (isProductDetailPage) {
     displayProductDetail()
 }
-
-
-

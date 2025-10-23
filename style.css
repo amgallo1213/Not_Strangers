@@ -659,6 +659,13 @@ footer {
     font-family: "Josefin Sans", sans-serif;
 }
 
+.authors-link   {
+    /* color: #00032A; */
+    color: pink;
+    padding-top: 16px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
 .social-icon {
     padding: 8px;
 }

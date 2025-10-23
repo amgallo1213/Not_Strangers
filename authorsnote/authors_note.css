@@ -1,0 +1,56 @@
+*   {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.authors-h1 {
+    padding: 48px 24px;
+    font-size: 1.75rem;
+}
+
+.authors-h2 {
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+    font-weight: 300;
+}
+
+.authors-pg-p {
+    padding: 48px;
+    font-weight: 300;
+    font-size: 1.25;
+}
+
+.authors-hr {
+    width: 90%;
+    margin-left: 24px;
+}
+
+.authors-div-bottom {
+    margin-bottom: 48px;
+}
+
+ul  {
+    padding-left: 24px;
+}
+li  {
+    list-style-type: none;
+    /* font-family: "Playfair Display", serif; */
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 8px;
+}
+
+iframe  {
+    padding-left: 24px;
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) {
+    iframe  {
+        width: 360px;
+        height: auto;
+    }
+  }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="authors_note.css">
 
-    <title>Not Strangers | Shop</title>
+    <title>Not Strangers | Author's Notes</title>
 </head>
-
 <body>
-
+    
     <header>
         <div class="shipping-offer">Free U.S. shipping on orders over $150</div>
         <nav role="navigation">
@@ -34,7 +32,7 @@
             <div class="nav-child" id="mobile-menu-nav">
                 <div id="cart-icon">
                     <i class="ri-shopping-bag-line icon"></i>
-                    <span  class="cart-item-count"></span>
+                    <span class="cart-item-count"></span>
                 </div>
                 <i class="ri-menu-line" id="burger-menu-icon" title="button to open mobile navigation"
                     onclick="openMobileNav()"></i>
@@ -65,26 +63,31 @@
         <i class="ri-close-line" id="cart-close"></i>
     </div>
 
-
     <main>
-
-        <h2 class="shop-h2">Our Perfumes</h2>
-        <div id="product-list" class="product-grid-wrapper"></div>
-
-
-        <section id="main-email">
-            <div>
-                <h4 class="email-h4">Keep in Touch</h4>
-                <p class="email-p">Get 10% off your first order, plus exclusive members only offers and promotions</p>
-            </div>
-            <div>
-                <form action="submit">
-                    <input type="email" name="" id="email-input" placeholder="Your Email">
-                    <button class="email-btn">Sign Up</button>
-                </form>
-            </div>
-        </section>
-
+        <h1 class="authors-h1">Author's Notes</h1>
+        <hr class="authors-hr">
+        <div class="authors-div">
+            <h2 class="authors-h2">Inspiration</h2>
+            <ul>
+                <li>Future Islands - <a href="https://genius.com/Future-islands-vireos-eye-lyrics">Vireo's Eye</a></li>
+            </ul>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jpCokkmZlWA?si=NVsrLNw6vQOX4uCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="authors-div">
+            <h2 class="authors-h2">Words By</h2>
+            <ul>
+                <li>The Wikipedia Perfume entry</li>
+                <li>"The Golden Bough: A Study in Magic and Religion" by James G. Frazer</li>
+                <li>The Air That Surrounds The Author</li>
+            </ul>
+        </div>
+        <div class="authors-div-bottom">
+            <h2 class="authors-h2">Photos By</h2>
+            <ul>
+                <li>Pexels.com</li>
+            </ul>
+        </div>
+        
     </main>
 
     <footer>
@@ -110,10 +113,7 @@
     </footer>
 
 
-    <script src="../products.js"></script>
     <script src="../script2.js"></script>
-    <!-- <script src="../script.js"></script> -->
 
 </body>
-
 </html>
