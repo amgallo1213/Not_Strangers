@@ -37,7 +37,10 @@ const cartIcon = document.querySelector("#cart-icon")
 const panda = document.querySelector(".panda")
 const cartClose = document.querySelector("#cart-close")
 
-const checkoutAlert = document.querySelector(".cart-checkout-btn")
+const buyNowButton = document.querySelector(".cart-checkout-btn")
+
+// const numberElement = document.querySelector(".number")
+// const decrementButton = document.querySelector("#decrement")
 
 cartIcon.addEventListener("click", () => panda.classList.add("active"))
 cartClose.addEventListener("click", () => panda.classList.remove("active"))
@@ -78,7 +81,7 @@ function displayProducts() {
 /* --------------------------  DISPLAY INDIVIDUAL PRODUCT ON PAGE ------------------------------------ */
 
 
-function displayProductDetail () {
+function displayProductDetail (id) {
     const productData = JSON.parse(sessionStorage.getItem("selectedProduct"))
 
     const titleEl = document.querySelector(".name")
@@ -89,7 +92,6 @@ function displayProductDetail () {
     const headNoteEl = document.querySelector(".head")
     const heartNoteEl = document.querySelector(".heart")
     const baseNoteEl = document.querySelector(".base")
-    const addToCartBtn = document.querySelector(".product-detail-btn")
 
     titleEl.textContent = productData.name
     imgEl.src = productData.img
@@ -100,10 +102,8 @@ function displayProductDetail () {
     heartNoteEl.textContent = productData.notes[0].heart
     baseNoteEl.textContent = productData.notes[0].base
 
-    addToCartBtn.addEventListener("click", () => {
-        updateCart()
-    })
-    updateCart()
+    // updateCart()
+
 }
 
 
@@ -122,6 +122,7 @@ function addToCart(id) {
     }
     updateCartCount(1)
     updateCart();
+    incrementDecrement()
 }
 
 // Update cart display
@@ -135,30 +136,57 @@ function updateCart() {
         totalItems += item.quantity;
         totalPrice += item.dollars * item.quantity;
 
-        const div = document.createElement('div');
-        div.classList.add('cart-item');
-        div.innerHTML = `
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
             
             <img src="${item.img}" alt="${item.name}" class="cart-img">
             <div class="cart-details">
                 <h2 class="cart-product-title">${item.name}</h2>
-                <p><span class="cart-price">$${item.dollars} × ${item.quantity}</span></p> 
+                <p><span class="cart-price">$${item.dollars}</span></p>
+            </div>
+            <div class="cart-quantity">
+                <button id="decrement">-</button>
+                <span class="number">${item.quantity}</span>
+                <button id="increment">+</button>
             </div>
             <i class="ri-delete-bin-line cart-remove" onclick="removeFromCart(${item.id})"></i>
             
             `;
-        cartItemsContainer.appendChild(div);
+        cartItemsContainer.appendChild(cartItem);
     });
 
     cartCount.textContent = totalItems;
     cartTotal.textContent = totalPrice;
 
+}
 
-    const imgBox = div.querySelector(".img-box")
-    imgBox.addEventListener("click", () => {
-        sessionStorage.setItem("selectedProduct", JSON.stringify(product))
-        window.location.href = "../product-details/product-details.html"
+
+function incrementDecrement() {
+    const cartItem = document.querySelector(".cart-quantity").addEventListener("click", event => {
+        const numberElement = document.querySelector(".number")
+        const decrementButton = document.querySelector("#decrement")
+
+        let quantity = numberElement.textContent
+
+        if (event.target.id === "decrement" && quantity > 1){
+            quantity--
+            if (quantity === 1) {
+                decrementButton.style.color = "#999"
+            } 
+        } else
+
+        if (event.target.id === "increment") {
+            quantity++
+            decrementButton.style.color = "#333"
+        }
+        numberElement.textContent = quantity
+        totalPrice = quantity * dollars
+        updateTotalPrice()
+        updateCart()
     })
+    updateTotalPrice()
+    updateCart()
 }
 
 
@@ -169,18 +197,21 @@ function removeFromCart(id) {
     updateCartCount(1)
 }
 
-function alertCheckout(){
-    // const cartItems = cartItemsContainer.querySelectorAll(".cart-item")
-    // if (cartItems.length === 0) {
-    //     alert("Your cart is empty. Please continue shopping.")
-    //     return
-    // }
-    // cartItems.forEach(cartItem = cartItem.remove())
-    // cartItemCount = 0
-    // updateCartCount(0)
-    // updateTotalPrice()
+
+// BUY BUTTON IN CART
+function buyNow() {
+    const cartItems = cartItemsContainer.querySelectorAll(".cart-item")
+    if (cartItems.length === 0) {
+        alert("Your cart is empty. Please continue shopping.")
+        return
+    }
+    cartItems.forEach(cartItem => cartItem.remove())
+    cartItemCount = 0
+    cartTotal.textContent = "0"
+    updateCartCount(0)
     alert("Thank you for shopping with us")
 }
+
 
 // Number of items in cart
 

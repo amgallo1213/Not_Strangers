@@ -11,7 +11,7 @@
     padding: 36px 16px;
 }
 
-.product-box    {
+.product    {
     padding: 12px;
 }
 
@@ -19,7 +19,7 @@
     padding: 12px 12px 12px 0;
 }
 
-.product-box .img-box   {
+.product .img-box   {
     display: flex;
     /* border-radius: 6px; */
     overflow: hidden;

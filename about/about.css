@@ -1,3 +1,14 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-img-div, .about-text-div  {
+    width: 50vw;
+}
+
 .about-img    {
     height: 400px;
     padding: 24px;
@@ -19,4 +30,17 @@
     padding: 48px;
     font-weight: 300;
     font-size: 1.25;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) {
+    .about  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-img-div, .about-text-div  {
+    width: 90%;
+}
 }
