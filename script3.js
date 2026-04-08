@@ -23,6 +23,7 @@ const closeMobileNav = () => {
 
 /* --------------------------  DISPLAY INDIVIDUAL PRODUCT ON PAGE ------------------------------------ */
 
+const isProductDetailPage = document.querySelector(".product-detail")
 
 function displayProductDetail (id) {
     const productData = JSON.parse(sessionStorage.getItem("selectedProduct"))
@@ -44,7 +45,6 @@ function displayProductDetail (id) {
     headNoteEl.textContent = productData.notes[0].head
     heartNoteEl.textContent = productData.notes[0].heart
     baseNoteEl.textContent = productData.notes[0].base
-
 
 }
 
@@ -81,7 +81,7 @@ function displayProducts() {
     })
 }
 
-displayProducts(productList)
+// displayProducts(productList)
 
 /* --------------------------  OPEN AND CLOSE CART ------------------------------------ */
 
