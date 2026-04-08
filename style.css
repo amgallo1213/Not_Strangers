@@ -71,9 +71,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #f6eeec;
+    /* background: linear-gradient(top #f6eeec, #ffffff); */
     color: #00032A;
     font-family: "Josefin Sans", sans-serif;
-    height: 72px;
+    /* height: 72px; */
+    height: 58px;
     font-size: 1.3rem;
     z-index: 6;
 }
@@ -81,6 +83,7 @@ nav {
 nav a {
     color: #00032A;
     padding: 8px;
+    /* text-transform: uppercase; */
     &:hover {
         color: pink;
     }
@@ -191,24 +194,6 @@ nav a {
 
 /* ------------------------------ CART ---------------------------- */
 
-/* .panda  {
-    position: fixed;
-    top: 0;
-    right: -100%;  
-    
-    width: 360px;
-    height: 100%;
-    background-color: #f6eeec;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    padding: 85px 20px 40px;
-    z-index: 1090;
-    overflow: auto;
-    transition: 0.5s;
-}
-
-.panda.active    {
-    right: 0;
-} */
 
 .shoppingCart  {
     position: fixed;

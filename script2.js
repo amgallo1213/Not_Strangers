@@ -31,7 +31,7 @@ const isProductDetailPage = document.querySelector(".product-detail")
 const productList = document.querySelector("#product-list")
 const cartCount = document.querySelector(".cart-item-count")
 const cartTotal = document.querySelector(".cart-total-price")
-const cartItemsContainer = document.querySelector(".cart-content")
+
 
 const cartIcon = document.querySelector("#cart-icon")
 const panda = document.querySelector(".panda")

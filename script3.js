@@ -98,6 +98,12 @@ const cartContents = document.querySelector(".cart-contents")
 const cartCount = document.querySelector(".cart-item-count")
 const cartTotal = document.querySelector(".total-price")
 
+// const cartItemsContainer = document.querySelector(".cart-content")
+
+// const decrementButton = document.getElementById("#decrement")
+// decrementButton.addEventListener("click", removeFromCart)
+
+
 let cart = []
 let cartItemCount = 0
 
@@ -112,7 +118,7 @@ function addItemToCart(id) {
         cart.push({ ...item, quantity: 1 })
     }
     updateCart()
-    updateCartCount(1)
+    updateCartCountBadge(1)
 
 }
 
@@ -136,7 +142,7 @@ function updateCart() {
                 <p class="price-in-cart">$${product.dollars}</p>
             </div>
             <div class="cart-quantity">
-                <button id="decrement">-</button>
+                <button id="decrement" onclick="decrement()">-</button>
                 <span class="number" >${product.quantity}</span>
                 <button id="increment">+</button>
             </div>
@@ -157,11 +163,12 @@ function updateCart() {
 function removeFromCart(id) {
     cart = cart.filter(item => item.id !== id)
     updateCart()
-    updateCartCount(-1)
+    updateCartCountBadge(-1)
 }
 
+
 // Number of items in cart
-const updateCartCount = change => {
+const updateCartCountBadge = change => {
     const cartItemCountBadge = document.querySelector(".cart-item-count")
     cartItemCount += change
     if (cartItemCount > 0){
@@ -172,6 +179,25 @@ const updateCartCount = change => {
         cartItemCountBadge.textContent = ""
     }
 }
+
+// BUY BUTTON IN CART
+
+const buyButton = document.querySelector(".cart-checkout-btn")
+buyButton.addEventListener("click", () => {
+    if (cart.length === 0) {
+        alert ("your cart is empty")
+        return
+    } else {
+        cart = cart.pop(document.querySelectorAll(".cart-item"))
+        totalPrice = 0 //this does not work
+        alert("thank you for shopping with us")
+        // updateCartCountBadge()
+    }
+    updateCart()
+    removeFromCart()
+    updateCartCountBadge() // this does not work
+})
+
 
 // Initialize
 
