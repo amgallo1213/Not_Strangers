@@ -191,11 +191,11 @@ nav a {
 
 /* ------------------------------ CART ---------------------------- */
 
-.panda  {
+/* .panda  {
     position: fixed;
     top: 0;
     right: -100%;  
-    /* right: 0; */
+    
     width: 360px;
     height: 100%;
     background-color: #f6eeec;
@@ -207,6 +207,25 @@ nav a {
 }
 
 .panda.active    {
+    right: 0;
+} */
+
+.shoppingCart  {
+    position: fixed;
+    top: 0;
+    right: -100%;  
+
+    width: 360px;
+    height: 100%;
+    background-color: #f6eeec;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 85px 20px 40px;
+    z-index: 1090;
+    overflow: auto;
+    transition: 0.5s;
+}
+
+.shoppingCart.active    {
     right: 0;
 }
 
@@ -299,8 +318,12 @@ nav a {
     font-family: "Playfair Display", serif;
 }
 
+.dollar-sign-p  {
+    margin-left: 24px;
+}
+
 .total-price    {
-    margin-left: 10px;
+    /* margin-left: 10px; */
     font-weight: 600;
 }
 
@@ -682,12 +705,18 @@ footer {
         flex-direction: column;
         justify-content: space-between;
     }
+
     nav a {
         display: none;
     }
-    #cart-icon  {
+    #burger-menu-icon   {
         position: absolute;
         left: 5%;
+    }
+    #cart-icon  {
+        position: absolute;
+        /* left: 5%; */
+        right: 5%;
     }
     .hero-imgs  {
         display: flex;
@@ -699,6 +728,9 @@ footer {
     }
     
     .panda   {
+        width: 100%;
+    }
+    .shoppingCart   {
         width: 100%;
     }
     .product-detail {

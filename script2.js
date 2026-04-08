@@ -39,7 +39,7 @@ const cartClose = document.querySelector("#cart-close")
 
 const buyNowButton = document.querySelector(".cart-checkout-btn")
 
-// const numberElement = document.querySelector(".number")
+// let numberElement = document.querySelector(".number")
 // const decrementButton = document.querySelector("#decrement")
 
 cartIcon.addEventListener("click", () => panda.classList.add("active"))
@@ -102,7 +102,6 @@ function displayProductDetail (id) {
     heartNoteEl.textContent = productData.notes[0].heart
     baseNoteEl.textContent = productData.notes[0].base
 
-    // updateCart()
 
 }
 
@@ -134,24 +133,25 @@ function updateCart() {
     cartItemsContainer.innerHTML = '';
 
     cart.forEach(item => {
-        totalItems += item.quantity;
-        totalPrice += item.dollars * item.quantity;
+        let {id, name, dollars, img, quantity} = item
+        totalItems += quantity;
+        totalPrice += dollars * quantity;
 
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
         cartItem.innerHTML = `
             
-            <img src="${item.img}" alt="${item.name}" class="cart-img">
+            <img src="${img}" alt="${name}" class="cart-img">
             <div class="cart-details">
-                <h2 class="cart-product-title">${item.name}</h2>
-                <p><span class="cart-price">$${item.dollars}</span></p>
+                <h2 class="cart-product-title">${name}</h2>
+                <p><span class="cart-price">$${dollars}</span></p>
             </div>
             <div class="cart-quantity">
-                <button id="decrement">-</button>
-                <span class="number">${item.quantity}</span>
-                <button id="increment">+</button>
+                <button id="decrement" onclick="decrement(${id})">-</button>
+                <span class="number" id=${id}>${quantity}</span>
+                <button id="increment" >+</button>
             </div>
-            <i class="ri-delete-bin-line cart-remove" onclick="removeFromCart(${item.id})"></i>
+            <i class="ri-delete-bin-line cart-remove" onclick="removeFromCart(${id})"></i>
             
             `;
         cartItemsContainer.appendChild(cartItem);
@@ -159,14 +159,23 @@ function updateCart() {
 
     cartCount.textContent = totalItems;
     cartTotal.textContent = totalPrice;
-
 }
+
+// let increment = (id) => {
+//     console.log(id)
+//     quantity++
+// }
+// let decrement = (id) => {
+//     console.log(id)
+// }
+// let updateQuantity = () => {}
 
 
 function incrementDecrement() {
     const cartItem = document.querySelector(".cart-quantity").addEventListener("click", event => {
-        const numberElement = document.querySelector(".number")
+        let numberElement = document.querySelector(".number")
         const decrementButton = document.querySelector("#decrement")
+        const incrementButton = document.querySelector("#increment")
         
         let quantity = numberElement.textContent
 
@@ -179,13 +188,13 @@ function incrementDecrement() {
 
         if (event.target.id === "increment") {
             quantity++
-            decrementButton.style.color = "#333"
+            incrementButton.style.color = "#333"
         }
         numberElement.textContent = quantity
 
-        // totalPrice = quantity * priceCart
+        totalPrice = quantity * priceCart
         updateTotalPrice() //this is the one that makes the quantity count change
-        updateCart()
+        updateCart(cartItem)
     })
 
     updateTotalPrice()
@@ -194,10 +203,11 @@ function incrementDecrement() {
 
 function updateTotalPrice () {
     const priceCart = document.querySelector(".cart-price")
-    const numberElement = document.querySelector(".number")
+    let numberElement = document.querySelector(".number")
     let quantity = numberElement.textContent
     totalPrice = quantity * priceCart
 }
+
 
 
 // Remove from cart
@@ -206,6 +216,20 @@ function removeFromCart(id) {
     updateCart();
     updateCartCount(1)
 }
+
+// Number of items in cart
+const updateCartCount = change => {
+    const cartItemCountBadge = document.querySelector(".cart-item-count")
+    cartItemCount += change
+    if (cartItemCount > 0){
+        cartItemCountBadge.style.visibility = "visible"
+        cartItemCountBadge.textContent = cartItemCount
+    } else {
+        cartItemCountBadge.style.visibility = "hidden"
+        cartItemCountBadge.textContent = ""
+    }
+}
+
 
 
 // BUY BUTTON IN CART
@@ -219,23 +243,13 @@ function buyNow() {
     cartItemCount = 0
     cartTotal.textContent = "0"
     updateCartCount(0)
+    updateTotalPrice()
+    // removeFromCart()
     alert("Thank you for shopping with us")
 }
 
 
-// Number of items in cart
 
-const updateCartCount = change => {
-    const cartItemCountBadge = document.querySelector(".cart-item-count")
-    cartItemCount += change
-    if (cartItemCount > 0){
-        cartItemCountBadge.style.visibility = "visible"
-        cartItemCountBadge.textContent = cartItemCount
-    } else {
-        cartItemCountBadge.style.visibility = "hidden"
-        cartItemCountBadge.textContent = ""
-    }
-}
 
 
 // Initialize
