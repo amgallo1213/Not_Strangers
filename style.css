@@ -82,11 +82,28 @@ nav {
 
 nav a {
     color: #00032A;
-    padding: 8px;
+    padding: 8px 8px 2px 8px;
+    display: inline-block;
+    position: relative;
     /* text-transform: uppercase; */
-    &:hover {
-        color: pink;
-    }
+}
+
+nav a::after   {
+    content: '';
+    position: absolute;
+    width: 90%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 8px;
+    background-color: #00032A;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 #cart-icon  {
