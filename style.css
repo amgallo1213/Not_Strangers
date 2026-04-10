@@ -672,10 +672,15 @@ h2 {
 footer {
     height: 100px;
     background-color: #f6eeec;
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; */
+}
+
+.footer-inner   {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
 }
 
 .footer-link {

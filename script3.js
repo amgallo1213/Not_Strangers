@@ -187,7 +187,6 @@ const updateCartCountBadge = change => {
 }
 
 
-
 // BUY BUTTON IN CART
 
 const buyButton = document.querySelector(".cart-checkout-btn")
@@ -203,6 +202,40 @@ buyButton.addEventListener("click", () => {
     updateCart()
     removeFromCart()
 })
+
+
+// CREATE FOOTER
+
+const footer = document.querySelector('.footer')
+
+function createFooter() {
+    const div = document.createElement('div')
+    div.classList.add('footer-inner')
+    div.innerHTML = `
+    
+        <div>
+            <a href="../home/index.html" class="footer-link">Home</a>
+            <a href="../about/about.html" class="footer-link">About</a>
+            <a href="../learn/learn.html" class="footer-link">Learn</a>
+            <a href="../shop/shop.html" class="footer-link">Shop</a>
+        </div>
+        <div>
+                <i class='bx bxl-instagram bx-sm social-icon'></i>
+                <i class='bx bxs-castle bx-sm social-icon'></i>
+                <i class='bx bxl-facebook-circle bx-sm social-icon'></i>
+                <i class='bx bxl-tiktok bx-sm social-icon'></i>
+            </div>
+        </div>
+        <div>
+            <h3>Not Strangers</h3>
+            <a href="../authorsnote/authors_note.html" class="authors-link">Author's Note</a>
+        </div>
+
+    `
+    footer.appendChild(div)
+}
+
+createFooter()
 
 
 // Initialize
