@@ -65,6 +65,7 @@ function displayProducts() {
             <h2 class="product-title"> 
                 ${product.name}
             </h2>
+            <p class="product-words">${product.keyWords}</p>
             <div class="price-and-cart>
                 <span class="product-price">$${product.dollars}</span> 
                 <button class="shop-btn" onclick="addItemToCart(${product.id})">Add to Cart</button>            
@@ -98,7 +99,6 @@ const cartContents = document.querySelector(".cart-contents")
 const cartCount = document.querySelector(".cart-item-count")
 const cartTotal = document.querySelector(".total-price")
 
-// const cartItemsContainer = document.querySelector(".cart-content")
 
 // const decrementButton = document.getElementById("#decrement")
 // decrementButton.addEventListener("click", removeFromCart)
@@ -142,7 +142,7 @@ function updateCart() {
                 <p class="price-in-cart">$${product.dollars}</p>
             </div>
             <div class="cart-quantity">
-                <button id="decrement" onclick="decrement()">-</button>
+                <button id="decrement" onclick="decrement(${product.id})">-</button>
                 <span class="number" >${product.quantity}</span>
                 <button id="increment">+</button>
             </div>
@@ -166,6 +166,12 @@ function removeFromCart(id) {
     updateCartCountBadge(-1)
 }
 
+// function decrement(id) {
+//     product.quantity --
+//     updateCart()
+//     updateCartCountBadge(-1)
+// }
+
 
 // Number of items in cart
 const updateCartCountBadge = change => {
@@ -180,6 +186,8 @@ const updateCartCountBadge = change => {
     }
 }
 
+
+
 // BUY BUTTON IN CART
 
 const buyButton = document.querySelector(".cart-checkout-btn")
@@ -188,14 +196,12 @@ buyButton.addEventListener("click", () => {
         alert ("your cart is empty")
         return
     } else {
-        cart = cart.pop(document.querySelectorAll(".cart-item"))
-        totalPrice = 0 //this does not work
+        cart = []
         alert("thank you for shopping with us")
-        // updateCartCountBadge()
+        updateCartCountBadge()
     }
     updateCart()
     removeFromCart()
-    updateCartCountBadge() // this does not work
 })
 
 

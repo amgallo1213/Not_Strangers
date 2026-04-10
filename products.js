@@ -6,7 +6,7 @@ const products = [
         "img": "../images/beach_witch.jpeg",
         "category": "lighter",
         "bestSeller": true,
-        "keyWords": "",
+        "keyWords": "bring on the sun and waves",
         "notes": [
             { "head": "salt, orange", "heart": "ylang-ylang", "base": "sandalwood" }
         ],
@@ -21,7 +21,7 @@ const products = [
         "img": "../images/venn.jpg",
         "bestSeller": true,
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "Wet, Hot, Not. Wet, Hot, Not.",
         "notes": [
             { "head": "grapefruit", "heart": "salt", "base": "lemon" }
         ],
@@ -37,7 +37,7 @@ const products = [
         "img": "../images/Hungry_Water.webp",
         "bestSeller": true,
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "black currant, basil", "heart": "cinnamon, cypress", "base": "cedar, myrrh" }
         ],
@@ -53,7 +53,7 @@ const products = [
         "img": "../images/venn.jpg",
         "bestSeller": true,
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "jasmine, iris", "heart": "tonka bean", "base": "musk" }
         ],
@@ -68,7 +68,7 @@ const products = [
         "name": "Ibn Sina",
         "img": "../images/Hungry_Water.webp",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "rose", "heart": "rose", "base": "amber" }
         ],
@@ -83,7 +83,7 @@ const products = [
         "name": "Crashing Sexual Traffic",
         "img": "../images/venn.jpg",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "pink pepper", "heart": "amber", "base": "orris" }
         ],
@@ -98,7 +98,7 @@ const products = [
         "name": "Stevie Nick's Piano Tuner",
         "img": "../images/Stevie.jpg",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "you can go your own way",
         "notes": [
             { "head": "fig", "heart": "cardamom, toasted coconut", "base": "sandalwood" }
         ],
@@ -113,7 +113,7 @@ const products = [
         "name": "Lukewarm Champagne",
         "img": "../images/Hungry_Water.webp",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "drink the next one faster",
         "notes": [
             { "head": "Chrysanthemum, chamomile", "heart": "white tea", "base": "barley, honey" }
         ],
@@ -128,7 +128,7 @@ const products = [
         "name": "Shogun Assassin",
         "img": "../images/ShogunAssassin.webp",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "fleeting and mysterious. watch out!",
         "notes": [
             { "head": "Bergamot", "heart": "Juniper Berry", "base": "Oakmoss, Patchouli" }
         ],
@@ -142,7 +142,7 @@ const products = [
         "name": "Awake Before Dawn",
         "img": "../images/Hungry_Water.webp",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "quince", "heart": "pettigrain", "base": "oakmoss" }
         ],
@@ -156,7 +156,7 @@ const products = [
         "name": "A Complex Proposition",
         "img": "../images/venn.jpg",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "Iso E", "heart": "cassis", "base": "cedarwood" }
         ],
@@ -170,9 +170,9 @@ const products = [
         "name": "Scrumptus Precision",
         "img": "../images/Hungry_Water.webp",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "warm, sharp, cozy",
         "notes": [
-            { "head": "mandarin", "heart": "almond", "base": "cedar" }
+            { "head": "vanilla", "heart": "almond", "base": "cedar" }
         ],
         "dollars": 150,
         "size": 30,
@@ -184,7 +184,7 @@ const products = [
         "name": "Happy Indeed",
         "img": "../images/venn.jpg",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "saffron", "heart": "vanilla", "base": "amber" }
         ],
@@ -198,7 +198,7 @@ const products = [
         "name": "Hungry Water",
         "img": "../images/Hungry_Water.webp",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "rosemary, thyme", "heart": "lavender, sage", "base": "orange blossom" }
         ],
@@ -212,7 +212,7 @@ const products = [
         "name": "All the Swans",
         "img": "../images/venn.jpg",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "white grape", "heart": "peony", "base": "sandalwood" }
         ],
@@ -226,7 +226,7 @@ const products = [
         "name": "The Little Thief",
         "img": "../images/Hungry_Water.webp",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "ginger", "heart": "neroli, jasmine", "base": "vetiver" }
         ],
@@ -240,7 +240,7 @@ const products = [
         "name": "Swim Team Birthday Party",
         "img": "../images/Hungry_Water.webp",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "mojitos by the pool, then tacos",
         "notes": [
             { "head": "chlorine", "heart": "oreos", "base": "musk" }
         ],
@@ -254,7 +254,7 @@ const products = [
         "name": "Memory is Molecular",
         "img": "../images/venn.jpg",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "yuzu", "heart": "jasmine", "base": "moss, vinyl" }
         ],
@@ -267,7 +267,7 @@ const products = [
         "name": "Planet of the Oud",
         "img": "../images/Swans.jpg",
         "category": "heavier",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "violet", "heart": "vanilla", "base": "amber, rose" }
         ],
@@ -281,7 +281,7 @@ const products = [
         "name": "Daft Punk Can't Hurt You",
         "img": "../images/venn.jpg",
         "category": "lighter",
-        "keyWords": "",
+        "keyWords": "words, words, words",
         "notes": [
             { "head": "blood orange", "heart": "sage", "base": "eucalyptus, tonka" }
         ],
