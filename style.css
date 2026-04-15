@@ -41,6 +41,7 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+    cursor:default;
 }
 
 img {
@@ -59,9 +60,10 @@ img {
     background-color: #00032A;
     color: #f6eeec;
     font-family: "Josefin Sans", sans-serif;
-    height: 44px;
+    font-weight: 400;
+    height: 36px;
     place-content: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 nav {
@@ -74,7 +76,6 @@ nav {
     /* background: linear-gradient(top #f6eeec, #ffffff); */
     color: #00032A;
     font-family: "Josefin Sans", sans-serif;
-    /* height: 72px; */
     height: 58px;
     font-size: 1.3rem;
     z-index: 6;
@@ -110,7 +111,6 @@ nav a:hover::after {
     display: inline-block;
     padding-right: 16px;
     font-size: 1.85rem;
-    cursor: pointer;
 
     &:hover {
         color:pink;
@@ -165,11 +165,9 @@ nav a:hover::after {
     text-decoration: none;
     padding: 0.7rem;
     transition: all 200ms ease-in-out;
-    cursor: pointer;
 
     &:hover {
         color: #00032A;
-        cursor: pointer;
     }
 }
 
@@ -216,8 +214,7 @@ nav a:hover::after {
     position: fixed;
     top: 0;
     right: -100%;  
-
-    width: 360px;
+    width: 400px;
     height: 100%;
     background-color: #f6eeec;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -271,7 +268,7 @@ nav a:hover::after {
     display: flex;
     width: 100px;
     border: 1px solid #00032A;
-    border-radius: 5px;
+    border-radius: 2px;
     margin-top: 8px;
 }
 
@@ -280,7 +277,6 @@ nav a:hover::after {
     width: 30px;
     border: none;
     font-size: 20px;
-    cursor: pointer;
 }
 
 .cart-quantity #decrement   {
@@ -305,8 +301,9 @@ nav a:hover::after {
 
 .cart-remove    {
     font-size: 25px;
-    cursor: pointer;
     padding-top: 8px;
+    padding-left: 8px;
+    font-weight: 300;
 }
 
 .total  {
@@ -325,30 +322,28 @@ nav a:hover::after {
 }
 
 .total-price    {
-    /* margin-left: 10px; */
     font-weight: 600;
 }
 
 .cart-checkout-btn    {
     display: block;
-    background-color: #00032A;
-    color: whitesmoke;
+    color: #00032A;
+    background-color: #f6eeec;
     height: 30px;
     width: 110px;
     border: 1px solid #00032A;
-    border-radius: 5px;
+    border-radius: 2px;
     /* margin: 20px auto 0; */
     margin-top: 16px;
     padding: 0.1rem;
     font-weight: 500;
     text-transform: uppercase;
     font-family: "Josefin Sans", sans-serif;
+    transition: all 0.3s;
 }
 
 .cart-checkout-btn:hover  {
-    box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 8px -5px;
-    transform: translate3d(0, 1px, 0);
-    cursor: pointer;
+    transform: translateX(3px)
 }
 
 #cart-close {
@@ -356,7 +351,6 @@ nav a:hover::after {
     top: 20px;
     right: 15px;
     font-size: 1.5rem;
-    cursor: pointer;
 }
 
 
@@ -429,13 +423,7 @@ h2 {
 }
 
 .hero-btn:hover {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-    transform: translate3d(0, 2px, 0);
-    cursor: pointer;
-}
-
-.hero-btn:focus {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    transform: translateX(3px)
 }
 
 
@@ -543,14 +531,9 @@ h2 {
 }
 
 .f-btn:hover {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-    transform: translate3d(0, 2px, 0);
-    cursor: pointer;
+    transform: translateX(3px)
 }
 
-.f-btn:focus {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}
 
 
 /* -------------------------- FEATURES ------------------------------------ */
@@ -661,8 +644,7 @@ h2 {
 }
 
 .email-btn:hover {
-    transform: translate3d(0, 2px, 0);
-    cursor: pointer;
+    transform: translateX(3px)
 }
 
 
@@ -698,6 +680,18 @@ footer {
 
 .social-icon {
     padding: 8px;
+}
+
+.checkout-modal {
+    display: block;
+    top: 50%;
+    left: 50%;
+    z-index: 150;
+    height: 200px;
+    width: 400px;
+    border: 2px solid #00032A;
+    background-color: #f6eeec;
+    color: #00032A;
 }
 
 

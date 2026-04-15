@@ -166,12 +166,6 @@ function removeFromCart(id) {
     updateCartCountBadge(-1)
 }
 
-// function decrement(id) {
-//     product.quantity --
-//     updateCart()
-//     updateCartCountBadge(-1)
-// }
-
 
 // Number of items in cart
 const updateCartCountBadge = change => {
@@ -209,9 +203,9 @@ buyButton.addEventListener("click", () => {
 const footer = document.querySelector('.footer')
 
 function createFooter() {
-    const div = document.createElement('div')
-    div.classList.add('footer-inner')
-    div.innerHTML = `
+    const footerDiv = document.createElement('div')
+    footerDiv.classList.add('footer-inner')
+    footerDiv.innerHTML = `
     
         <div>
             <a href="../home/index.html" class="footer-link">Home</a>
@@ -232,7 +226,7 @@ function createFooter() {
         </div>
 
     `
-    footer.appendChild(div)
+    footer.appendChild(footerDiv)
 }
 
 createFooter()
