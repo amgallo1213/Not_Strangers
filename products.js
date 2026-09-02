@@ -3,7 +3,7 @@ const products = [
         "id": 521688,
         "quantity": 1,
         "name": "Beach Witch",
-        "img": "../images/beach_witch.jpeg",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "bestSeller": true,
         "keyWords": "bring on the sun and waves",
@@ -34,7 +34,7 @@ const products = [
         "id": 324544,
         "quantity": 1,
         "name": "All Inclusive Vibe",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "bestSeller": true,
         "category": "lighter",
         "keyWords": "words, words, words",
@@ -66,7 +66,7 @@ const products = [
         "id": 115786,
         "quantity": 1,
         "name": "Ibn Sina",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "keyWords": "words, words, words",
         "notes": [
@@ -96,7 +96,7 @@ const products = [
         "id": 909261,
         "quantity": 1,
         "name": "Stevie Nick's Piano Tuner",
-        "img": "../images/Stevie.jpg",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "keyWords": "you can go your own way",
         "notes": [
@@ -111,7 +111,7 @@ const products = [
         "id": 234513,
         "quantity": 1,
         "name": "Lukewarm Champagne",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "keyWords": "drink the next one faster",
         "notes": [
@@ -126,7 +126,7 @@ const products = [
         "id": 780489,
         "quantity": 1,
         "name": "Shogun Assassin",
-        "img": "../images/ShogunAssassin.webp",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "keyWords": "fleeting and mysterious. watch out!",
         "notes": [
@@ -140,7 +140,7 @@ const products = [
         "id": 838487,
         "quantity": 1,
         "name": "Awake Before Dawn",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "words, words, words",
         "notes": [
@@ -168,7 +168,7 @@ const products = [
         "id": 278997,
         "quantity": 1,
         "name": "Scrumptus Precision",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "warm, sharp, cozy",
         "notes": [
@@ -196,7 +196,7 @@ const products = [
         "id": 374871,
         "quantity": 1,
         "name": "Hungry Water",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "words, words, words",
         "notes": [
@@ -224,7 +224,7 @@ const products = [
         "id": 295944,
         "quantity": 1,
         "name": "The Little Thief",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "words, words, words",
         "notes": [
@@ -238,7 +238,7 @@ const products = [
         "id": 886241,
         "quantity": 1,
         "name": "Swim Team Birthday Party",
-        "img": "../images/Hungry_Water.webp",
+        "img": "../images/venn.jpg",
         "category": "lighter",
         "keyWords": "mojitos by the pool, then tacos",
         "notes": [
@@ -265,7 +265,7 @@ const products = [
         "id": 179366,
         "quantity": 1,
         "name": "Planet of the Oud",
-        "img": "../images/Swans.jpg",
+        "img": "../images/venn.jpg",
         "category": "heavier",
         "keyWords": "words, words, words",
         "notes": [
